@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerMap AI - AI Career Mapping Platform</title>
+  <meta name="description" content="Bridge the gap to your dream career with CareerMap AI. Analyze your resume, identify skills gaps, and get a personalized learning roadmap.">
+  <meta property="og:title" content="CareerMap AI - AI Career Mapping Platform">
+  <meta property="og:description" content="Bridge the gap to your dream career. Analyze your resume, identify skills gaps, and get a personalized learning roadmap.">
+  <meta property="og:type" content="website">
+  <meta name="application-name" content="CareerMap AI">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234f46e5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19L10 11L14 15L20 6'/%3E%3Ccircle cx='4' cy='19' r='2' fill='%234f46e5'/%3E%3Ccircle cx='10' cy='11' r='2' fill='%234f46e5'/%3E%3Ccircle cx='14' cy='15' r='2' fill='%234f46e5'/%3E%3Ccircle cx='20' cy='6' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Blobs -->
+  <div class="bg-blobs">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; color: white;">
+            <path d="M4 19L10 11L14 15L20 6"></path>
+            <circle cx="4" cy="19" r="2" fill="currentColor"></circle>
+            <circle cx="20" cy="6" r="2" fill="currentColor"></circle>
+          </svg>
+        </div>
+        <span>CareerMap AI</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="logout-btn" class="btn btn-secondary" style="display:none; padding:0.4rem 0.85rem; font-size:0.85rem;" title="Sign Out">Logout</button>
+        <button id="theme-toggle" class="theme-btn" title="Toggle Light/Dark Mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page-anim" style="display: flex; flex-direction: column; align-items: center; padding-top: 3rem; padding-bottom: 4rem; gap: 2.5rem;">
+    <!-- Hero Section -->
+    <section class="hero-section" style="text-align: center; max-width: 800px; display: flex; flex-direction: column; gap: 1.25rem; align-items: center;">
+      <h1 style="font-size: 3.25rem; line-height: 1.1; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Bridge the Gap to Your Dream Career
+      </h1>
+      <p style="font-size: 1.2rem; max-width: 600px; color: var(--text-secondary);">
+        Upload your resume, select your target role, and let our AI analyze your skills, pinpoint gaps, and generate a step‑by‑step roadmap to make you job‑ready.
+      </p>
+    </section>
+
+    <!-- Auth Container (visible when not logged in) -->
+    <div id="login-section" class="card-glass" style="width: 100%; max-width: 440px; padding: 2.25rem 2rem; box-shadow: var(--shadow-xl);">
+      
+      <!-- Tab Header -->
+      <div style="display: flex; background: rgba(255,255,255,0.05); padding: 4px; border-radius: 12px; margin-bottom: 1.75rem; border: 1px solid var(--border-color, rgba(255,255,255,0.1));">
+        <button id="tab-login" type="button" onclick="switchAuthTab('login')" style="flex: 1; padding: 0.6rem; border: none; border-radius: 8px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; background: var(--primary); color: white;">Sign In</button>
+        <button id="tab-signup" type="button" onclick="switchAuthTab('signup')" style="flex: 1; padding: 0.6rem; border: none; border-radius: 8px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--text-secondary);">Create Account</button>
+      </div>
+
+      <!-- ===== LOGIN VIEW ===== -->
+      <div id="login-view">
+        <h2 style="margin-bottom: 0.35rem; text-align: center;">Welcome Back 👋</h2>
+        <p style="text-align:center; color:var(--text-secondary); margin-bottom:1.5rem; font-size:0.9rem;">Login to access your career roadmap and scores.</p>
+        <div id="login-error" style="display:none; background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.4); color:#ef4444; border-radius:0.6rem; padding:0.65rem 1rem; font-size:0.875rem; font-weight:500; margin-bottom:1rem;" role="alert"></div>
+        
+        <form id="login-form" style="display:flex; flex-direction:column; gap:1.25rem;">
+          <div class="form-group">
+            <input type="email" id="login-email" class="form-input" placeholder=" " required autocomplete="email">
+            <label for="login-email" class="form-label">Email Address</label>
+          </div>
+          <div class="form-group">
+            <input type="password" id="login-password" class="form-input" placeholder=" " required autocomplete="current-password">
+            <label for="login-password" class="form-label">Password</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%; margin-top:0.25rem;">Sign In</button>
+        </form>
+
+        <p style="text-align:center; margin-top:1.5rem; font-size:0.875rem; color:var(--text-secondary);">
+          Don't have an account? 
+          <a href="javascript:void(0)" onclick="switchAuthTab('signup')" style="color:var(--primary); font-weight:600; text-decoration:none;">Create Account</a>
+        </p>
+      </div>
+
+      <!-- ===== SIGNUP VIEW ===== -->
+      <div id="signup-view" style="display:none;">
+        <h2 style="margin-bottom: 0.35rem; text-align: center;">Create Account ✨</h2>
+        <p style="text-align:center; color:var(--text-secondary); margin-bottom:1.5rem; font-size:0.9rem;">Begin analyzing your resume and mapping skill gaps.</p>
+        <div id="signup-error" style="display:none; background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.4); color:#ef4444; border-radius:0.6rem; padding:0.65rem 1rem; font-size:0.875rem; font-weight:500; margin-bottom:1rem;" role="alert"></div>
+        <div id="signup-success" style="display:none; background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.4); color:#10b981; border-radius:0.6rem; padding:0.65rem 1rem; font-size:0.875rem; font-weight:500; margin-bottom:1rem;" role="alert"></div>
+        
+        <form id="signup-form" style="display:flex; flex-direction:column; gap:1.25rem;">
+          <div class="form-group">
+            <input type="text" id="signup-name" class="form-input" placeholder=" " required autocomplete="name">
+            <label for="signup-name" class="form-label">Full Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="signup-email" class="form-input" placeholder=" " required autocomplete="email">
+            <label for="signup-email" class="form-label">Email Address</label>
+          </div>
+          <div class="form-group">
+            <input type="password" id="signup-password" class="form-input" placeholder=" " required autocomplete="new-password" minlength="4">
+            <label for="signup-password" class="form-label">Password (min 4 characters)</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%; margin-top:0.25rem;">Create Account</button>
+        </form>
+
+        <p style="text-align:center; margin-top:1.5rem; font-size:0.875rem; color:var(--text-secondary);">
+          Already have an account? 
+          <a href="javascript:void(0)" onclick="switchAuthTab('login')" style="color:var(--primary); font-weight:600; text-decoration:none;">Sign In</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Dashboard (visible after login) -->
+    <div id="dashboard" style="display:none; width:100%; max-width:900px;">
+      <div style="text-align:center; margin-bottom: 2rem;">
+        <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Welcome to your Dashboard 👋</h2>
+        <p style="color: var(--text-secondary);">Select a feature below to analyze your profile and build your career roadmap.</p>
+      </div>
+      <div class="grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1.5rem;">
+        <a href="upload.html" class="card-glass" style="padding:1.75rem 1.5rem; text-align:center; box-shadow:var(--shadow-md); text-decoration:none; color:inherit; transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">📄</div>
+          <h3 style="margin-bottom:0.35rem; color:var(--primary);">Analyze Resume</h3>
+          <p style="font-size:0.875rem; color:var(--text-secondary);">Upload &amp; examine your skills against top companies</p>
+        </a>
+        <a href="score.html" class="card-glass" style="padding:1.75rem 1.5rem; text-align:center; box-shadow:var(--shadow-md); text-decoration:none; color:inherit; transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">📊</div>
+          <h3 style="margin-bottom:0.35rem; color:var(--primary);">Readiness Score</h3>
+          <p style="font-size:0.875rem; color:var(--text-secondary);">View your overall fit and score report</p>
+        </a>
+        <a href="gaps.html" class="card-glass" style="padding:1.75rem 1.5rem; text-align:center; box-shadow:var(--shadow-md); text-decoration:none; color:inherit; transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">🎯</div>
+          <h3 style="margin-bottom:0.35rem; color:var(--primary);">Skill Gaps</h3>
+          <p style="font-size:0.875rem; color:var(--text-secondary);">Identify missing skills &amp; targeted fixes</p>
+        </a>
+        <a href="roadmap.html" class="card-glass" style="padding:1.75rem 1.5rem; text-align:center; box-shadow:var(--shadow-md); text-decoration:none; color:inherit; transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">🗺️</div>
+          <h3 style="margin-bottom:0.35rem; color:var(--primary);">Career Roadmap</h3>
+          <p style="font-size:0.875rem; color:var(--text-secondary);">Step-by-step personalized learning path</p>
+        </a>
+        <a href="progress.html" class="card-glass" style="padding:1.75rem 1.5rem; text-align:center; box-shadow:var(--shadow-md); text-decoration:none; color:inherit; transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">📈</div>
+          <h3 style="margin-bottom:0.35rem; color:var(--primary);">Track Progress</h3>
+          <p style="font-size:0.875rem; color:var(--text-secondary);">Log completed courses &amp; update scores</p>
+        </a>
+      </div>
+    </div>
+  </main>
+
+<footer>
+  <p>&copy; 2026 CareerMap AI. Made with premium design aesthetics.</p>
+</footer>
+
+<script src="script.js?v=3"></script>
+<script>
+  // ----- Switch Auth Tabs -----
+  function switchAuthTab(tab) {
+    const loginView = document.getElementById('login-view');
+    const signupView = document.getElementById('signup-view');
+    const tabLogin = document.getElementById('tab-login');
+    const tabSignup = document.getElementById('tab-signup');
+
+    document.getElementById('login-error').style.display = 'none';
+    document.getElementById('signup-error').style.display = 'none';
+    document.getElementById('signup-success').style.display = 'none';
+
+    if (tab === 'login') {
+      loginView.style.display = 'block';
+      signupView.style.display = 'none';
+      tabLogin.style.background = 'var(--primary)';
+      tabLogin.style.color = 'white';
+      tabSignup.style.background = 'transparent';
+      tabSignup.style.color = 'var(--text-secondary)';
+    } else {
+      loginView.style.display = 'none';
+      signupView.style.display = 'block';
+      tabSignup.style.background = 'var(--primary)';
+      tabSignup.style.color = 'white';
+      tabLogin.style.background = 'transparent';
+      tabLogin.style.color = 'var(--text-secondary)';
+    }
+  }
+
+  // ----- Login Logic -----
+  document.getElementById('login-form').addEventListener('submit', async e => {
+    e.preventDefault();
+    const errorEl = document.getElementById('login-error');
+    errorEl.style.display = 'none';
+
+    const email = document.getElementById('login-email').value.trim().toLowerCase();
+    const password = document.getElementById('login-password').value;
+
+    try {
+      const res = await fetch('http://localhost:8000/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        errorEl.textContent = data.detail || 'Login failed. Please check your credentials.';
+        errorEl.style.display = 'block';
+        return;
+      }
+      localStorage.setItem('cm_token', data.access_token);
+      localStorage.setItem('currentUser', data.user.email);
+      localStorage.setItem('cm_user_name', data.user.name);
+      document.getElementById('login-section').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'block';
+      if (logoutBtn) logoutBtn.style.display = 'inline-block';
+      if (typeof showToast === 'function') showToast(`Welcome back, ${data.user.name}!`, 'success');
+      if (typeof initNavbarAuth === 'function') initNavbarAuth();
+    } catch (err) {
+      console.warn("Backend unavailable, using local fallback", err);
+      const users = JSON.parse(localStorage.getItem('cm_users') || '{}');
+      const user = users[email];
+      if (!user) {
+        errorEl.textContent = 'No account found with this email. Please sign up!';
+        errorEl.style.display = 'block';
+        return;
+      }
+      if (user.password !== password) {
+        errorEl.textContent = 'Incorrect password. Please try again.';
+        errorEl.style.display = 'block';
+        return;
+      }
+      localStorage.setItem('currentUser', email);
+      document.getElementById('login-section').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'block';
+      if (logoutBtn) logoutBtn.style.display = 'inline-block';
+      if (typeof showToast === 'function') showToast(`Welcome back, ${user.name || 'User'}!`, 'success');
+    }
+  });
+
+  // ----- Signup Logic -----
+  document.getElementById('signup-form').addEventListener('submit', async e => {
+    e.preventDefault();
+    const errorEl = document.getElementById('signup-error');
+    const successEl = document.getElementById('signup-success');
+    errorEl.style.display = 'none';
+    successEl.style.display = 'none';
+
+    const name = document.getElementById('signup-name').value.trim();
+    const email = document.getElementById('signup-email').value.trim().toLowerCase();
+    const password = document.getElementById('signup-password').value;
+
+    if (!name || !email || !password) {
+      errorEl.textContent = 'Please fill out all fields.';
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    try {
+      const res = await fetch('http://localhost:8000/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password })
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        errorEl.textContent = data.detail || 'Registration failed.';
+        errorEl.style.display = 'block';
+        return;
+      }
+      localStorage.setItem('cm_token', data.access_token);
+      localStorage.setItem('currentUser', data.user.email);
+      localStorage.setItem('cm_user_name', data.user.name);
+
+      successEl.textContent = 'Account created successfully! Redirecting...';
+      successEl.style.display = 'block';
+
+      setTimeout(() => {
+        document.getElementById('login-section').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'block';
+        if (logoutBtn) logoutBtn.style.display = 'inline-block';
+        if (typeof showToast === 'function') showToast(`Account created! Welcome, ${name}.`, 'success');
+        if (typeof initNavbarAuth === 'function') initNavbarAuth();
+      }, 600);
+    } catch (err) {
+      console.warn("Backend unavailable, fallback to localStorage", err);
+      const users = JSON.parse(localStorage.getItem('cm_users') || '{}');
+      if (users[email]) {
+        errorEl.textContent = 'An account with this email already exists. Please Sign In.';
+        errorEl.style.display = 'block';
+        return;
+      }
+      users[email] = { name, email, password, createdAt: new Date().toISOString() };
+      localStorage.setItem('cm_users', JSON.stringify(users));
+      localStorage.setItem('currentUser', email);
+
+      successEl.textContent = 'Account created successfully! Redirecting...';
+      successEl.style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('login-section').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'block';
+        if (logoutBtn) logoutBtn.style.display = 'inline-block';
+      }, 600);
+    }
+  });
+
+  // ----- Check Existing Login & Logout -----
+  const logoutBtn = document.getElementById('logout-btn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+      localStorage.removeItem('currentUser');
+      localStorage.removeItem('cm_token');
+      localStorage.removeItem('cm_logged_in');
+      window.location.reload();
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('currentUser') || localStorage.getItem('cm_token')) {
+      document.getElementById('login-section').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'block';
+      if (logoutBtn) logoutBtn.style.display = 'inline-block';
+    } else {
+      document.getElementById('login-section').style.display = 'block';
+      document.getElementById('dashboard').style.display = 'none';
+      if (logoutBtn) logoutBtn.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>

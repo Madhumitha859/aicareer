@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="auth-guard.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strengths & Gaps - CareerMap AI</title>
+  <meta name="description" content="View your identified skill gaps and strengths compared against target company and job role requirements.">
+  <meta property="og:title" content="Strengths & Gaps - CareerMap AI">
+  <meta property="og:description" content="Detailed audit of your capabilities on CareerMap AI.">
+  <meta property="og:type" content="website">
+  <meta name="application-name" content="CareerMap AI">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234f46e5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19L10 11L14 15L20 6'/%3E%3Ccircle cx='4' cy='19' r='2' fill='%234f46e5'/%3E%3Ccircle cx='10' cy='11' r='2' fill='%234f46e5'/%3E%3Ccircle cx='14' cy='15' r='2' fill='%234f46e5'/%3E%3Ccircle cx='20' cy='6' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Blobs -->
+  <div class="bg-blobs">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; color: white;">
+            <path d="M4 19L10 11L14 15L20 6"></path>
+            <circle cx="4" cy="19" r="2" fill="currentColor"></circle>
+            <circle cx="10" cy="11" r="2" fill="currentColor"></circle>
+            <circle cx="14" cy="15" r="2" fill="currentColor"></circle>
+            <circle cx="20" cy="6" r="2" fill="currentColor"></circle>
+          </svg>
+        </div>
+        <span>CareerMap AI</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="upload.html" class="nav-link">Analyze</a></li>
+        <li><a href="profile.html" class="nav-link">Profile</a></li>
+        <li><a href="score.html" class="nav-link">Score</a></li>
+        <li><a href="gaps.html" class="nav-link active">Gaps</a></li>
+        <li><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+        <li><a href="progress.html" class="nav-link">Progress</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" title="Toggle Light/Dark Mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main style="display: flex; flex-direction: column; align-items: center; gap: 2.5rem; padding-top: 1rem;">
+    <!-- Page Header -->
+    <div style="text-align: center;">
+      <h2 id="gaps-header-title" style="font-size: 2rem;">Strengths & Gaps Analysis</h2>
+      <p id="gaps-header-subtitle" style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem;">
+        Detailed audit of your capabilities against target industry requirements.
+      </p>
+    </div>
+
+    <!-- Gaps Grid Layout -->
+    <div class="gaps-grid" style="width: 100%; max-width: 1050px;">
+      
+      <!-- Strengths Column -->
+      <div style="display: flex; flex-direction: column;">
+        <h3 style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 1.3rem;">
+          <span style="color: var(--success); font-size: 1.4rem;">✓</span> Resume Strengths
+        </h3>
+        <div id="strengths-container" style="display: flex; flex-direction: column;">
+          <!-- Populated dynamically by script.js -->
+        </div>
+      </div>
+
+      <!-- Gaps Column -->
+      <div style="display: flex; flex-direction: column;">
+        <h3 style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 1.3rem;">
+          <span style="color: var(--danger); font-size: 1.4rem;">⚠</span> Skill Gap Deficits
+        </h3>
+        <div id="gaps-container" style="display: flex; flex-direction: column; gap: 1rem;">
+          <!-- Populated dynamically by script.js -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA links -->
+    <div class="page-anim" style="display: flex; justify-content: center; width: 100%; margin-top: 1.5rem;">
+      <a href="roadmap.html" class="btn btn-primary btn-lg" style="padding: 0.8rem 2.5rem;">
+        View Interactive Roadmap →
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 CareerMap AI. Made with premium design aesthetics.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

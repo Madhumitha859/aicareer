@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="auth-guard.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Profile - CareerMap AI</title>
+  <meta name="description" content="View and update your parsed resume profile, including skills, education, and experience.">
+  <meta property="og:title" content="Your Profile - CareerMap AI">
+  <meta property="og:description" content="Manage your candidate profile and skill tags on CareerMap AI.">
+  <meta property="og:type" content="website">
+  <meta name="application-name" content="CareerMap AI">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234f46e5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19L10 11L14 15L20 6'/%3E%3Ccircle cx='4' cy='19' r='2' fill='%234f46e5'/%3E%3Ccircle cx='10' cy='11' r='2' fill='%234f46e5'/%3E%3Ccircle cx='14' cy='15' r='2' fill='%234f46e5'/%3E%3Ccircle cx='20' cy='6' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Blobs -->
+  <div class="bg-blobs">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; color: white;">
+            <path d="M4 19L10 11L14 15L20 6"></path>
+            <circle cx="4" cy="19" r="2" fill="currentColor"></circle>
+            <circle cx="10" cy="11" r="2" fill="currentColor"></circle>
+            <circle cx="14" cy="15" r="2" fill="currentColor"></circle>
+            <circle cx="20" cy="6" r="2" fill="currentColor"></circle>
+          </svg>
+        </div>
+        <span>CareerMap AI</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="upload.html" class="nav-link">Analyze</a></li>
+        <li><a href="profile.html" class="nav-link active">Profile</a></li>
+        <li><a href="score.html" class="nav-link">Score</a></li>
+        <li><a href="gaps.html" class="nav-link">Gaps</a></li>
+        <li><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+        <li><a href="progress.html" class="nav-link">Progress</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" title="Toggle Light/Dark Mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main style="display: flex; justify-content: center; align-items: center; padding-top: 1rem;">
+    <div class="card-glass page-anim" style="width: 100%; max-width: 800px; padding: 3rem;">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <h2>Extracted Profile Metrics</h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem;">
+          Verify and modify the parsed details from your resume staging.
+        </p>
+      </div>
+
+      <form id="profile-form" style="display: flex; flex-direction: column; gap: 2rem;">
+        
+        <!-- Experience Block -->
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <label style="font-weight: 600; font-size: 0.95rem; color: var(--text-secondary);">Experience Description</label>
+          <div id="exp-field" contenteditable="true" class="form-input" style="min-height: 120px; overflow-y: auto; white-space: pre-wrap;" role="textbox"></div>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Double click to edit. Describe jobs, roles, and durations.</span>
+        </div>
+
+        <!-- Education Block -->
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <label style="font-weight: 600; font-size: 0.95rem; color: var(--text-secondary);">Education Description</label>
+          <div id="edu-field" contenteditable="true" class="form-input" style="min-height: 100px; overflow-y: auto; white-space: pre-wrap;" role="textbox"></div>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Describe university degrees, graduation dates, and certifications.</span>
+        </div>
+
+        <!-- Projects Block -->
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <label style="font-weight: 600; font-size: 0.95rem; color: var(--text-secondary);">Key Projects</label>
+          <div id="proj-field" contenteditable="true" class="form-input" style="min-height: 120px; overflow-y: auto; white-space: pre-wrap;" role="textbox"></div>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">List personal or academic projects and technologies used.</span>
+        </div>
+
+        <!-- Skills Chip Block -->
+        <div style="display: flex; flex-direction: column; gap: 0.75rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+          <label style="font-weight: 600; font-size: 0.95rem; color: var(--text-secondary);">Skills Tags</label>
+          
+          <!-- Chips Area -->
+          <div id="skills-chip-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; min-height: 40px; padding: 0.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: rgba(var(--primary-rgb), 0.01);">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Add Skill Bar -->
+          <div style="display: flex; gap: 0.5rem; align-items: center;">
+            <div style="position: relative; flex: 1;">
+              <input type="text" id="skill-add-input" class="form-input" placeholder=" " style="padding: 0.7rem 1rem;">
+              <label for="skill-add-input" class="form-label">Add a skill tag...</label>
+            </div>
+            <button type="button" id="skill-add-btn" class="btn btn-secondary" style="padding: 0.7rem 1.5rem;">
+              Add Skill
+            </button>
+          </div>
+        </div>
+
+        <!-- Save Button -->
+        <div style="margin-top: 1rem;">
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            Save Profile & View Readiness Score →
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 CareerMap AI. Made with premium design aesthetics.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

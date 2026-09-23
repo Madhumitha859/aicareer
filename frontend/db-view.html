@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database Viewer — CareerMap AI</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    .db-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    .table-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 2rem;
+    }
+    .table-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .db-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .db-table th, .db-table td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .db-table th {
+      background: rgba(79, 70, 229, 0.05);
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .db-table tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(79, 70, 229, 0.1);
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <div class="db-container page-anim">
+    <div style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--text-primary);">🗄️ Database Inspector</h1>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Live visual representation of tables and candidate records inside <code>careermap.db</code>.</p>
+      </div>
+      <button class="btn btn-primary" onclick="loadDatabaseData()">🔄 Refresh Database</button>
+    </div>
+
+    <!-- USERS TABLE CARD -->
+    <div class="table-card">
+      <div class="table-header">
+        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--primary);">👤 Table: USERS</h3>
+        <span class="badge" id="users-count">0 Records</span>
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="db-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Created At</th>
+            </tr>
+          </thead>
+          <tbody id="users-tbody">
+            <tr><td colspan="4" style="text-align: center; color: var(--text-muted);">Loading users data...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PROFILES TABLE CARD -->
+    <div class="table-card">
+      <div class="table-header">
+        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--primary);">🎓 Table: PROFILES (Candidate Resume Data)</h3>
+        <span class="badge" id="profiles-count">0 Records</span>
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="db-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>User ID</th>
+              <th>Education</th>
+              <th>Skills</th>
+              <th>Experience</th>
+              <th>Projects</th>
+            </tr>
+          </thead>
+          <tbody id="profiles-tbody">
+            <tr><td colspan="6" style="text-align: center; color: var(--text-muted);">Loading profile data...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ANALYSES TABLE CARD -->
+    <div class="table-card">
+      <div class="table-header">
+        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--primary);">📊 Table: ANALYSES (Company Readiness Reports)</h3>
+        <span class="badge" id="analyses-count">0 Records</span>
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="db-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>User ID</th>
+              <th>Target Company</th>
+              <th>Target Role</th>
+              <th>Readiness Score</th>
+              <th>Created At</th>
+            </tr>
+          </thead>
+          <tbody id="analyses-tbody">
+            <tr><td colspan="6" style="text-align: center; color: var(--text-muted);">Loading analyses data...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="auth-guard.js"></script>
+  <script src="script.js"></script>
+  <script>
+    async function loadDatabaseData() {
+      try {
+        const res = await fetch('http://localhost:8000/api/profile/all-db-data');
+        if (!res.ok) throw new Error('API server offline or endpoint not found');
+        const data = await res.json();
+        
+        // Render Users
+        document.getElementById('users-count').textContent = `${data.users.length} Records`;
+        const uTbody = document.getElementById('users-tbody');
+        if (data.users.length === 0) {
+          uTbody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: var(--text-muted);">No user records found</td></tr>';
+        } else {
+          uTbody.innerHTML = data.users.map(u => `
+            <tr>
+              <td><strong>#${u.id}</strong></td>
+              <td>${u.name || 'Candidate'}</td>
+              <td><code>${u.email}</code></td>
+              <td style="font-size: 0.8rem; color: var(--text-muted);">${u.created_at || 'N/A'}</td>
+            </tr>
+          `).join('');
+        }
+
+        // Render Profiles
+        document.getElementById('profiles-count').textContent = `${data.profiles.length} Records`;
+        const pTbody = document.getElementById('profiles-tbody');
+        if (data.profiles.length === 0) {
+          pTbody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: var(--text-muted);">No candidate profiles found</td></tr>';
+        } else {
+          pTbody.innerHTML = data.profiles.map(p => `
+            <tr>
+              <td><strong>#${p.id}</strong></td>
+              <td><span class="badge">User #${p.user_id}</span></td>
+              <td>${p.education || 'Not specified'}</td>
+              <td>${Array.isArray(p.skills) ? p.skills.slice(0, 5).map(s => `<span class="badge" style="margin-right:2px;">${s}</span>`).join('') : p.skills}</td>
+              <td style="font-size:0.85rem;">${p.experience || 'N/A'}</td>
+              <td style="font-size:0.85rem;">${typeof p.projects === 'string' ? p.projects : JSON.stringify(p.projects)}</td>
+            </tr>
+          `).join('');
+        }
+
+        // Render Analyses
+        document.getElementById('analyses-count').textContent = `${data.analyses.length} Records`;
+        const aTbody = document.getElementById('analyses-tbody');
+        if (data.analyses.length === 0) {
+          aTbody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: var(--text-muted);">No company analysis reports found</td></tr>';
+        } else {
+          aTbody.innerHTML = data.analyses.map(a => `
+            <tr>
+              <td><strong>#${a.id}</strong></td>
+              <td><span class="badge">User #${a.user_id}</span></td>
+              <td><strong>${a.target_company}</strong></td>
+              <td>${a.target_role}</td>
+              <td><span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-weight:700;">${a.readiness_score}%</span></td>
+              <td style="font-size: 0.8rem; color: var(--text-muted);">${a.created_at || 'N/A'}</td>
+            </tr>
+          `).join('');
+        }
+      } catch (err) {
+        console.warn('Backend not running or dynamic fetch failed, showing local storage status', err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadDatabaseData);
+  </script>
+</body>
+</html>

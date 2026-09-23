@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- If already logged in, skip to app -->
+  <script>if(localStorage.getItem('currentUser')){window.location.replace('index.html');}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Sign Up - CareerMap AI</title>
+  <meta name="description" content="Sign in or register for CareerMap AI to access your dashboard, analyze resume, and track readiness.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234f46e5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19L10 11L14 15L20 6'/%3E%3Ccircle cx='4' cy='19' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .auth-error {
+      display: none;
+      background: rgba(239,68,68,0.12);
+      border: 1px solid rgba(239,68,68,0.4);
+      color: #ef4444;
+      border-radius: 0.6rem;
+      padding: 0.65rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .auth-success {
+      display: none;
+      background: rgba(16,185,129,0.12);
+      border: 1px solid rgba(16,185,129,0.4);
+      color: #10b981;
+      border-radius: 0.6rem;
+      padding: 0.65rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .auth-card {
+      width: 100%;
+      max-width: 440px;
+      padding: 2.75rem 2.25rem;
+      box-shadow: var(--shadow-xl);
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Blobs -->
+  <div class="bg-blobs">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+  </div>
+
+  <!-- Navigation Header (minimal — login page) -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; color: white;">
+            <path d="M4 19L10 11L14 15L20 6"></path>
+            <circle cx="4" cy="19" r="2" fill="currentColor"></circle>
+            <circle cx="20" cy="6" r="2" fill="currentColor"></circle>
+          </svg>
+        </div>
+        <span>CareerMap AI</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" title="Toggle Light/Dark Mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main style="display: flex; justify-content: center; align-items: center; padding-top: 4rem; padding-bottom: 2rem;">
+    <div class="card-glass page-anim auth-card">
+
+      <!-- ===== LOGIN SECTION ===== -->
+      <div id="login-section">
+        <div style="text-align:center; margin-bottom:1.75rem;">
+          <h2 style="margin-bottom:0.35rem;">Welcome Back 👋</h2>
+          <p style="font-size:0.92rem; color:var(--text-secondary);">Login to access your career roadmap and scores.</p>
+        </div>
+
+        <div id="login-error" class="auth-error" role="alert"></div>
+
+        <form id="login-form" style="display:flex; flex-direction:column; gap:1.25rem; margin-top:1rem;">
+          <div class="form-group">
+            <input type="email" id="login-email" class="form-input" placeholder=" " required autocomplete="email">
+            <label for="login-email" class="form-label">Email Address</label>
+          </div>
+          <div class="form-group">
+            <input type="password" id="login-password" class="form-input" placeholder=" " required autocomplete="current-password">
+            <label for="login-password" class="form-label">Password</label>
+          </div>
+          <button type="submit" id="login-btn" class="btn btn-primary btn-lg" style="width:100%; margin-top:0.5rem;">
+            Sign In
+          </button>
+        </form>
+
+        <p style="text-align:center; margin-top:1.5rem; font-size:0.9rem;">
+          Don't have an account?
+          <a href="#" id="go-signup" style="color:var(--primary); text-decoration:none; font-weight:600; margin-left:0.25rem;">Create Account</a>
+        </p>
+      </div>
+
+      <!-- ===== SIGN UP SECTION ===== -->
+      <div id="signup-section" style="display:none;">
+        <div style="text-align:center; margin-bottom:1.75rem;">
+          <h2 style="margin-bottom:0.35rem;">Create Account ✨</h2>
+          <p style="font-size:0.92rem; color:var(--text-secondary);">Begin analyzing your resume and mapping skill gaps.</p>
+        </div>
+
+        <div id="signup-error" class="auth-error" role="alert"></div>
+        <div id="signup-success" class="auth-success" role="alert"></div>
+
+        <form id="signup-form" style="display:flex; flex-direction:column; gap:1.25rem; margin-top:1rem;">
+          <div class="form-group">
+            <input type="text" id="signup-name" class="form-input" placeholder=" " required autocomplete="name">
+            <label for="signup-name" class="form-label">Full Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="signup-email" class="form-input" placeholder=" " required autocomplete="email">
+            <label for="signup-email" class="form-label">Email Address</label>
+          </div>
+          <div class="form-group">
+            <input type="password" id="signup-password" class="form-input" placeholder=" " required autocomplete="new-password" minlength="4">
+            <label for="signup-password" class="form-label">Password (min 4 chars)</label>
+          </div>
+          <button type="submit" id="signup-btn" class="btn btn-primary btn-lg" style="width:100%; margin-top:0.5rem;">
+            Get Started
+          </button>
+        </form>
+
+        <p style="text-align:center; margin-top:1.5rem; font-size:0.9rem;">
+          Already have an account?
+          <a href="#" id="go-login" style="color:var(--primary); text-decoration:none; font-weight:600; margin-left:0.25rem;">Sign In</a>
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 CareerMap AI. Made with premium design aesthetics.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // ===== AUTH LOGIC (login.html only) =====
+
+    // Toggle between login / signup
+    document.getElementById('go-signup').addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('login-section').style.display = 'none';
+      document.getElementById('signup-section').style.display = 'block';
+    });
+    document.getElementById('go-login').addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('signup-section').style.display = 'none';
+      document.getElementById('login-section').style.display = 'block';
+    });
+
+    // Helper: get users registry
+    function getUsers() {
+      return JSON.parse(localStorage.getItem('cm_users') || '{}');
+    }
+    function saveUsers(users) {
+      localStorage.setItem('cm_users', JSON.stringify(users));
+    }
+    function showError(id, msg) {
+      const el = document.getElementById(id);
+      el.textContent = msg;
+      el.style.display = 'block';
+    }
+    function hideError(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    // ===== SIGNUP =====
+    document.getElementById('signup-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      hideError('signup-error');
+      document.getElementById('signup-success').style.display = 'none';
+
+      const name     = document.getElementById('signup-name').value.trim();
+      const email    = document.getElementById('signup-email').value.trim().toLowerCase();
+      const password = document.getElementById('signup-password').value;
+      const btn      = document.getElementById('signup-btn');
+
+      const users = getUsers();
+
+      if (users[email]) {
+        showError('signup-error', 'An account with this email already exists. Please log in.');
+        return;
+      }
+
+      // Save new user
+      users[email] = { name, email, password };
+      saveUsers(users);
+
+      // Auto-login
+      localStorage.setItem('currentUser', email);
+
+      btn.textContent = 'Creating account...';
+      btn.disabled = true;
+
+      document.getElementById('signup-success').textContent = `Account created! Welcome, ${name}. Redirecting...`;
+      document.getElementById('signup-success').style.display = 'block';
+
+      setTimeout(() => {
+        window.location.href = 'upload.html';
+      }, 1000);
+    });
+
+    // ===== LOGIN =====
+    document.getElementById('login-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      hideError('login-error');
+
+      const email    = document.getElementById('login-email').value.trim().toLowerCase();
+      const password = document.getElementById('login-password').value;
+      const btn      = document.getElementById('login-btn');
+
+      const users = getUsers();
+      const user  = users[email];
+
+      if (!user) {
+        showError('login-error', 'No account found with this email. Please sign up first.');
+        return;
+      }
+      if (user.password !== password) {
+        showError('login-error', 'Incorrect password. Please try again.');
+        return;
+      }
+
+      // Set current user
+      localStorage.setItem('currentUser', email);
+
+      btn.textContent = 'Signing in...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        window.location.href = 'upload.html';
+      }, 800);
+    });
+  </script>
+</body>
+</html>

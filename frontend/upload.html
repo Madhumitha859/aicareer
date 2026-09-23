@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Auth guard — must be first script. Redirects to login if not authenticated. -->
+  <script src="auth-guard.js?v=3"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Resume - CareerMap AI</title>
+  <meta name="description" content="Upload your resume and select your target company and role to analyze your career readiness on CareerMap AI.">
+  <meta property="og:title" content="Upload Resume - CareerMap AI">
+  <meta property="og:description" content="Stage your resume and calculate readiness score for specific company targets.">
+  <meta property="og:type" content="website">
+  <meta name="application-name" content="CareerMap AI">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234f46e5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19L10 11L14 15L20 6'/%3E%3Ccircle cx='4' cy='19' r='2' fill='%234f46e5'/%3E%3Ccircle cx='10' cy='11' r='2' fill='%234f46e5'/%3E%3Ccircle cx='14' cy='15' r='2' fill='%234f46e5'/%3E%3Ccircle cx='20' cy='6' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.json">
+  <!-- PDF.js and Mammoth.js CDN libraries for client-side parsing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Blobs -->
+  <div class="bg-blobs">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; color: white;">
+            <path d="M4 19L10 11L14 15L20 6"></path>
+            <circle cx="4" cy="19" r="2" fill="currentColor"></circle>
+            <circle cx="10" cy="11" r="2" fill="currentColor"></circle>
+            <circle cx="14" cy="15" r="2" fill="currentColor"></circle>
+            <circle cx="20" cy="6" r="2" fill="currentColor"></circle>
+          </svg>
+        </div>
+        <span>CareerMap AI</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="upload.html" class="nav-link active">Analyze</a></li>
+        <li><a href="profile.html" class="nav-link">Profile</a></li>
+        <li><a href="score.html" class="nav-link">Score</a></li>
+        <li><a href="gaps.html" class="nav-link">Gaps</a></li>
+        <li><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+        <li><a href="progress.html" class="nav-link">Progress</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" title="Toggle Light/Dark Mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main style="display: flex; justify-content: center; align-items: center; padding-top: 1.5rem; padding-bottom: 2rem;">
+    <div class="card-glass page-anim" style="width: 100%; max-width: 600px; padding: 2.5rem; display: flex; flex-direction: column; gap: 1.75rem;">
+      <div style="text-align: center;">
+        <h2>Analyze Your Career Readiness</h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem;">
+          Get tailored analysis, calculate your target company readiness score, and bridge the gaps.
+        </p>
+      </div>
+
+      <!-- STEP 1: Upload Resume -->
+      <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <label style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);">STEP 1 — Upload Resume (PDF, DOCX)</label>
+        <div id="upload-zone" class="upload-dropzone" style="padding: 1.5rem;">
+          <div class="dropzone-content">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📤</div>
+            <h4 style="margin-bottom: 0.25rem; font-family: var(--font-sans);">Drag & drop your resume here</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">or click to browse from files</p>
+          </div>
+        </div>
+        <input type="file" id="file-input" style="display: none;" accept=".pdf,.docx">
+      </div>
+
+      <!-- STEP 2: Target Company -->
+      <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <label style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);">STEP 2 — Select Target Company</label>
+        <div class="custom-select-wrapper" id="company-select-wrapper">
+          <div class="custom-select-trigger form-input" id="company-trigger">
+            <span id="selected-company-text" style="opacity: 0.6;">Select Company</span>
+            <span style="font-size: 0.75rem; opacity: 0.6;">▼</span>
+          </div>
+          <div class="custom-options" id="company-options">
+            <div style="padding: 0.5rem; border-bottom: 1px solid var(--border-color);">
+              <input type="text" class="search-input" id="company-search" placeholder="Search company..." autocomplete="off">
+            </div>
+            <div class="options-list" id="company-options-list">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3: Target Job Role -->
+      <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <label style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);">STEP 3 — Select Target Job Role</label>
+        <div class="custom-select-wrapper" id="role-select-wrapper">
+          <div class="custom-select-trigger form-input" id="role-trigger">
+            <span id="selected-role-text" style="opacity: 0.6;">Select Job Role</span>
+            <span style="font-size: 0.75rem; opacity: 0.6;">▼</span>
+          </div>
+          <div class="custom-options" id="role-options">
+            <div style="padding: 0.5rem; border-bottom: 1px solid var(--border-color);">
+              <input type="text" class="search-input" id="role-search" placeholder="Search job role..." autocomplete="off">
+            </div>
+            <div class="options-list" id="role-options-list">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit trigger -->
+      <div style="margin-top: 0.5rem;">
+        <button id="analyze-btn" class="btn btn-primary btn-lg" style="width: 100%;" disabled>
+          Analyze My Career Readiness
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Loader Overlay (Triggered by Analyze script) -->
+  <div id="loader-overlay" class="loader-overlay">
+    <div class="loader-card card-glass page-anim">
+      <div class="spinner"></div>
+      <h3 style="margin-bottom: 0.5rem;">Analyzing Resume Profile</h3>
+      <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 2rem;">
+        Please wait while our AI models parse and audit your career metrics...
+      </p>
+      <ul class="loading-steps">
+        <li class="loading-step">
+          <span class="loading-step-bullet">1</span>
+          <span>Parsing resume text...</span>
+        </li>
+        <li class="loading-step">
+          <span class="loading-step-bullet">2</span>
+          <span>Extracting skill profile...</span>
+        </li>
+        <li class="loading-step">
+          <span class="loading-step-bullet">3</span>
+          <span>Mapping industry gaps...</span>
+        </li>
+        <li class="loading-step">
+          <span class="loading-step-bullet">4</span>
+          <span>Generating learning roadmap...</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 CareerMap AI. Made with premium design aesthetics.</p>
+  </footer>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>

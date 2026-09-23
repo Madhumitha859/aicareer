@@ -1,0 +1,4958 @@
+{
+  "TCS": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Unit Testing"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Maven"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Express"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "Redux"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "Scikit-Learn",
+      "Git"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Oracle"
+    ]
+  },
+  "Infosys": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "PostgreSQL"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "Angular",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Java",
+      "Spring Boot",
+      "SQL",
+      "REST APIs",
+      "Microservices"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "Angular",
+      "TypeScript",
+      "Git"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Power BI",
+      "Tableau"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Scikit-Learn"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Wipro": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Flask",
+      "Unit Testing"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Express",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Java",
+      "SQL",
+      "REST APIs",
+      "Git"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Redux",
+      "Bootstrap"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Scikit-Learn"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "Git",
+      "Docker",
+      "Pandas"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Hibernate"
+    ]
+  },
+  "HCLTech": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Linux"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Jenkins"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "Backend Developer": [
+      "Python",
+      "Node.js",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Linux"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "NumPy"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "PyTorch",
+      "Git",
+      "Docker",
+      "Cloud Fundamentals"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Cognizant": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Flask",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "Redux"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs",
+      "ServiceNow CAD"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Hibernate"
+    ]
+  },
+  "Accenture": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Cloud Fundamentals"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Cloud Fundamentals"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Docker",
+      "TypeScript"
+    ],
+    "Backend Developer": [
+      "Python",
+      "Node.js",
+      "SQL",
+      "REST APIs",
+      "AWS",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Statistics"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Scikit-Learn"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker",
+      "Cloud Fundamentals"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs",
+      "ServiceNow CAD"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Capgemini": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Unit Testing",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Unit Testing"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Express",
+      "Unit Testing"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "SQL",
+      "REST APIs",
+      "Docker",
+      "Microservices"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "Unit Testing"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Power BI",
+      "Tableau"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "R"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "PyTorch",
+      "Git",
+      "Docker",
+      "Scikit-Learn"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs",
+      "AngularJS"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Hibernate",
+      "Unit Testing"
+    ]
+  },
+  "IBM": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker",
+      "Kubernetes"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Redux",
+      "Docker"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Docker",
+      "Redis"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Redux",
+      "Webpack"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "IBM Watson",
+      "Cognos"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Deep Learning"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Docker",
+      "Kubernetes"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs",
+      "IntegrationHub"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices",
+      "Docker"
+    ]
+  },
+  "LTIMindtree": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "FastAPI",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "TypeScript",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "Redux"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Power BI",
+      "Snowflake"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Docker",
+      "Git"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Kafka"
+    ]
+  },
+  "Tech Mahindra": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Flask",
+      "Networking"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Java",
+      "SQL",
+      "REST APIs",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Redux",
+      "Git"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Power BI",
+      "Tableau"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Deloitte": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "FastAPI",
+      "Cloud Fundamentals"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Azure DevOps"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "TypeScript",
+      "GraphQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Python",
+      "SQL",
+      "REST APIs",
+      "AWS",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "Next.js"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI",
+      "Alteryx"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "R",
+      "Tableau"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "MLflow",
+      "Cloud Fundamentals"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "ServiceNow CAD",
+      "IntegrationHub"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices",
+      "Azure"
+    ]
+  },
+  "PwC": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "EY": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "KPMG": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Google": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "gRPC",
+      "Google Cloud Platform"
+    ],
+    "Software Developer": [
+      "C++",
+      "Java",
+      "Python",
+      "Data Structures",
+      "Algorithms",
+      "System Design"
+    ],
+    "Full Stack Developer": [
+      "TypeScript",
+      "Angular",
+      "Node.js",
+      "Go",
+      "GCP",
+      "GraphQL"
+    ],
+    "Backend Developer": [
+      "Go",
+      "Java",
+      "C++",
+      "gRPC",
+      "GCP",
+      "Spanner",
+      "Kubernetes"
+    ],
+    "Frontend Developer": [
+      "TypeScript",
+      "Angular",
+      "HTML/CSS",
+      "Web Components",
+      "RxJS"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "BigQuery",
+      "Python",
+      "Looker",
+      "Statistics"
+    ],
+    "Data Scientist": [
+      "Python",
+      "TensorFlow",
+      "BigQuery",
+      "Statistics",
+      "Machine Learning",
+      "JAX"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "JAX",
+      "KubeFlow",
+      "GCP Vertex AI",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs",
+      "GCP Cloud"
+    ],
+    "Java Developer": [
+      "Java",
+      "gRPC",
+      "Guice",
+      "Data Structures",
+      "GCP"
+    ]
+  },
+  "Microsoft": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "FastAPI",
+      "Azure"
+    ],
+    "Software Developer": [
+      "C#",
+      ".NET Core",
+      "Azure",
+      "Data Structures",
+      "Algorithms",
+      "Git"
+    ],
+    "Full Stack Developer": [
+      "TypeScript",
+      "React",
+      "C#",
+      ".NET Core",
+      "Azure",
+      "GraphQL"
+    ],
+    "Backend Developer": [
+      "C#",
+      ".NET Core",
+      "Azure",
+      "SQL",
+      "Microservices",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "TypeScript",
+      "React",
+      "HTML/CSS",
+      "Fluent UI",
+      "Redux",
+      "Jest"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Power BI",
+      "Python",
+      "Azure Data Factory",
+      "Excel"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Azure ML",
+      "PyTorch",
+      "Statistics"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "PyTorch",
+      "Azure ML",
+      "Docker",
+      "ONNX",
+      "Kubernetes"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs",
+      "Azure Integration"
+    ],
+    "Java Developer": [
+      "Java",
+      "Spring Boot",
+      "Azure",
+      "Microservices",
+      "Kafka"
+    ]
+  },
+  "Amazon": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "AWS",
+      "REST APIs",
+      "Git",
+      "DynamoDB"
+    ],
+    "Software Developer": [
+      "Java",
+      "C++",
+      "AWS",
+      "Data Structures",
+      "Algorithms",
+      "System Design"
+    ],
+    "Full Stack Developer": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "AWS",
+      "DynamoDB",
+      "Lambda"
+    ],
+    "Backend Developer": [
+      "Java",
+      "Python",
+      "AWS Lambda",
+      "DynamoDB",
+      "REST APIs",
+      "Microservices"
+    ],
+    "Frontend Developer": [
+      "TypeScript",
+      "React",
+      "HTML/CSS",
+      "AWS CloudFront",
+      "Redux"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "AWS Redshift",
+      "Python",
+      "QuickSight",
+      "Excel"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "AWS SageMaker",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "AWS SageMaker",
+      "PyTorch",
+      "TensorFlow",
+      "Docker",
+      "MLOps"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs",
+      "AWS Integration"
+    ],
+    "Java Developer": [
+      "Java",
+      "Spring Boot",
+      "AWS",
+      "DynamoDB",
+      "Microservices"
+    ]
+  },
+  "Meta": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "GraphQL",
+      "PyTorch"
+    ],
+    "Software Developer": [
+      "C++",
+      "Python",
+      "Java",
+      "Data Structures",
+      "Algorithms",
+      "System Design"
+    ],
+    "Full Stack Developer": [
+      "React",
+      "TypeScript",
+      "GraphQL",
+      "Python",
+      "Node.js",
+      "Relay"
+    ],
+    "Backend Developer": [
+      "Python",
+      "C++",
+      "Hack",
+      "GraphQL",
+      "Distributed Systems",
+      "RocksDB"
+    ],
+    "Frontend Developer": [
+      "React",
+      "TypeScript",
+      "HTML/CSS",
+      "GraphQL",
+      "Redux",
+      "Jest"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Python",
+      "Presto",
+      "Data Visualization",
+      "Statistics"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Experimentation/A-B Testing",
+      "Machine Learning",
+      "PyTorch"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "PyTorch",
+      "Distributed Training",
+      "CUDA",
+      "C++",
+      "MLOps"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs",
+      "GraphQL"
+    ],
+    "Java Developer": [
+      "Java",
+      "Android",
+      "GraphQL",
+      "Data Structures"
+    ]
+  },
+  "Apple": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "FastAPI",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Swift",
+      "Objective-C",
+      "C++",
+      "Data Structures",
+      "Algorithms"
+    ],
+    "Full Stack Developer": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Python",
+      "SQL",
+      "REST APIs"
+    ],
+    "Backend Developer": [
+      "Java",
+      "Python",
+      "C++",
+      "Distributed Systems",
+      "Cassandra",
+      "Kafka"
+    ],
+    "Frontend Developer": [
+      "TypeScript",
+      "React",
+      "HTML/CSS",
+      "Web Canvas",
+      "Accessibility"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Python",
+      "Tableau",
+      "Statistics",
+      "Data Pipelines"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Statistics",
+      "PyTorch",
+      "NumPy"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "CoreML",
+      "PyTorch",
+      "C++",
+      "Metal",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "Spring Boot",
+      "Cassandra",
+      "Kafka",
+      "Microservices"
+    ]
+  },
+  "Nvidia": {
+    "Python Developer": [
+      "Python",
+      "CUDA",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Software Developer": [
+      "C++",
+      "CUDA",
+      "Python",
+      "Data Structures",
+      "Algorithms",
+      "GPU Architecture"
+    ],
+    "Full Stack Developer": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Python",
+      "Docker"
+    ],
+    "Backend Developer": [
+      "C++",
+      "Python",
+      "Go",
+      "gRPC",
+      "CUDA",
+      "Docker",
+      "Kubernetes"
+    ],
+    "Frontend Developer": [
+      "TypeScript",
+      "React",
+      "Three.js",
+      "WebGL",
+      "HTML/CSS"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Python",
+      "Omniverse",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "CUDA",
+      "RAPIDS",
+      "PyTorch",
+      "TensorFlow",
+      "Deep Learning"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "CUDA",
+      "TensorRT",
+      "PyTorch",
+      "C++",
+      "Distributed Training"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "C++",
+      "Python",
+      "Docker",
+      "Kubernetes"
+    ]
+  },
+  "Netflix": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Adobe": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "FastAPI",
+      "Docker"
+    ],
+    "Software Developer": [
+      "C++",
+      "Java",
+      "JavaScript",
+      "Data Structures",
+      "Algorithms"
+    ],
+    "Full Stack Developer": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "GraphQL",
+      "HTML/CSS"
+    ],
+    "Backend Developer": [
+      "Java",
+      "Node.js",
+      "C++",
+      "REST APIs",
+      "AWS",
+      "Microservices"
+    ],
+    "Frontend Developer": [
+      "TypeScript",
+      "React",
+      "HTML/CSS",
+      "Spectrum UI",
+      "WebGL"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Adobe Analytics",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Adobe Sensei",
+      "Machine Learning",
+      "PyTorch"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "C++",
+      "Docker",
+      "MLOps"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "Spring Boot",
+      "Adobe Experience Manager (AEM)",
+      "REST APIs"
+    ]
+  },
+  "Salesforce": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "FastAPI",
+      "Heroku"
+    ],
+    "Software Developer": [
+      "Apex",
+      "Java",
+      "Salesforce CRM",
+      "Data Structures",
+      "Git"
+    ],
+    "Full Stack Developer": [
+      "Lightning Web Components (LWC)",
+      "JavaScript",
+      "Apex",
+      "Node.js",
+      "Salesforce API"
+    ],
+    "Backend Developer": [
+      "Java",
+      "Apex",
+      "REST APIs",
+      "Microservices",
+      "Kafka",
+      "PostgreSQL"
+    ],
+    "Frontend Developer": [
+      "Lightning Web Components (LWC)",
+      "JavaScript",
+      "HTML/CSS",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Tableau",
+      "CRM Analytics",
+      "Python",
+      "Excel"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Einstein AI",
+      "Machine Learning",
+      "Statistics"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "PyTorch",
+      "Einstein AI",
+      "Docker",
+      "MLOps"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs",
+      "Salesforce Integration"
+    ],
+    "Java Developer": [
+      "Java",
+      "Spring Boot",
+      "Apex",
+      "Microservices",
+      "Kafka"
+    ]
+  },
+  "Oracle": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "Oracle Cloud (OCI)",
+      "REST APIs",
+      "Git"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Oracle DB",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Java",
+      "Oracle DB",
+      "REST APIs"
+    ],
+    "Backend Developer": [
+      "Java",
+      "SQL",
+      "Oracle Cloud",
+      "Microservices",
+      "Docker",
+      "Kubernetes"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "Oracle JET",
+      "React",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Oracle Analytics Cloud",
+      "Python",
+      "PL/SQL",
+      "Excel"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Oracle Machine Learning",
+      "Statistics",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "Oracle Cloud",
+      "Docker",
+      "PyTorch"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs",
+      "Oracle Integration"
+    ],
+    "Java Developer": [
+      "Java",
+      "PL/SQL",
+      "Oracle DB",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Cisco": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Networking (TCP/IP)",
+      "Docker",
+      "Git"
+    ],
+    "Software Developer": [
+      "C++",
+      "Python",
+      "Java",
+      "Networking",
+      "Linux",
+      "Data Structures"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Python",
+      "REST APIs",
+      "Docker"
+    ],
+    "Backend Developer": [
+      "Python",
+      "Go",
+      "C++",
+      "gRPC",
+      "Docker",
+      "Kubernetes"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "Redux"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Power BI",
+      "Network Analytics"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Network AI"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "PyTorch",
+      "Docker",
+      "Kubernetes",
+      "C++"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "Spring Boot",
+      "Microservices",
+      "Kafka",
+      "Docker"
+    ]
+  },
+  "Intel": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Qualcomm": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Uber": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "FastAPI",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Go",
+      "Java",
+      "C++",
+      "Data Structures",
+      "Algorithms",
+      "System Design"
+    ],
+    "Full Stack Developer": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Go",
+      "GraphQL",
+      "gRPC"
+    ],
+    "Backend Developer": [
+      "Go",
+      "Java",
+      "gRPC",
+      "Kafka",
+      "Cassandra",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "TypeScript",
+      "React",
+      "Base Web",
+      "HTML/CSS",
+      "Redux"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Presto",
+      "Python",
+      "Tableau",
+      "Geospatial Data"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pricing/Routing Algorithms"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "PyTorch",
+      "Michelangelo ML",
+      "Docker",
+      "Go"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "Go",
+      "Spring Boot",
+      "Kafka",
+      "Microservices"
+    ]
+  },
+  "Atlassian": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "FastAPI",
+      "AWS"
+    ],
+    "Software Developer": [
+      "Java",
+      "Kotlin",
+      "TypeScript",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "GraphQL",
+      "AWS"
+    ],
+    "Backend Developer": [
+      "Java",
+      "Kotlin",
+      "AWS",
+      "GraphQL",
+      "REST APIs",
+      "Microservices"
+    ],
+    "Frontend Developer": [
+      "TypeScript",
+      "React",
+      "Atlaskit",
+      "HTML/CSS",
+      "Redux"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Tableau",
+      "Python",
+      "Amplitude",
+      "Excel"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Product Analytics ML",
+      "PyTorch"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker",
+      "MLOps"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "Jira Integration"
+    ],
+    "Java Developer": [
+      "Java",
+      "Kotlin",
+      "Spring Boot",
+      "Microservices",
+      "AWS"
+    ]
+  },
+  "ServiceNow": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "FastAPI",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "JavaScript",
+      "ServiceNow Platform",
+      "Data Structures"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "AngularJS",
+      "React",
+      "Node.js",
+      "ServiceNow CAD"
+    ],
+    "Backend Developer": [
+      "Java",
+      "JavaScript",
+      "REST APIs",
+      "Microservices",
+      "SQL"
+    ],
+    "Frontend Developer": [
+      "JavaScript",
+      "AngularJS",
+      "React",
+      "HTML/CSS",
+      "ServiceNow UI"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "ServiceNow Performance Analytics",
+      "Python",
+      "Excel"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Now Intelligence AI",
+      "PyTorch"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "PyTorch",
+      "Now Intelligence",
+      "Docker",
+      "MLOps"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "ServiceNow CAD",
+      "IntegrationHub",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "Spring Boot",
+      "REST APIs",
+      "ServiceNow Integration"
+    ]
+  },
+  "Flipkart": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Zoho": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Swiggy": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Zomato": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Freshworks": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Paytm": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Razorpay": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "PhonePe": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "CRED": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Ola": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Reliance Jio": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Postman": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Meesho": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Nykaa": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Zerodha": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Goldman Sachs": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Pandas",
+      "FastAPI"
+    ],
+    "Software Developer": [
+      "Java",
+      "C++",
+      "SQL",
+      "Data Structures",
+      "Spring Boot",
+      "Financial Math"
+    ],
+    "Full Stack Developer": [
+      "React",
+      "TypeScript",
+      "Java",
+      "Spring Boot",
+      "SQL",
+      "REST APIs"
+    ],
+    "Backend Developer": [
+      "Java",
+      "C++",
+      "Python",
+      "SQL",
+      "Kafka",
+      "Microservices"
+    ],
+    "Frontend Developer": [
+      "TypeScript",
+      "React",
+      "HTML/CSS",
+      "Redux",
+      "WebSockets"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Financial Modeling"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Quantitative Finance",
+      "Statistics",
+      "Machine Learning"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "C++",
+      "Financial Analytics"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "Spring Boot",
+      "SQL",
+      "Kafka",
+      "Microservices",
+      "Hibernate"
+    ]
+  },
+  "JPMorgan Chase": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "AWS"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Spring Boot",
+      "Data Structures",
+      "Microservices"
+    ],
+    "Full Stack Developer": [
+      "React",
+      "TypeScript",
+      "Java",
+      "Spring Boot",
+      "Node.js",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Java",
+      "Spring Boot",
+      "SQL",
+      "REST APIs",
+      "AWS",
+      "Kafka"
+    ],
+    "Frontend Developer": [
+      "TypeScript",
+      "React",
+      "HTML/CSS",
+      "Redux",
+      "Jest"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Risk Analysis"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "AWS",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "Spring Boot",
+      "SQL",
+      "Kafka",
+      "Microservices"
+    ]
+  },
+  "Morgan Stanley": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Barclays": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Wells Fargo": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Walmart Global Tech": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "FastAPI",
+      "GCP"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Spring Boot",
+      "Data Structures",
+      "Kafka"
+    ],
+    "Full Stack Developer": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Java",
+      "SQL",
+      "GCP"
+    ],
+    "Backend Developer": [
+      "Java",
+      "Node.js",
+      "Spring Boot",
+      "Cassandra",
+      "Kafka",
+      "GCP"
+    ],
+    "Frontend Developer": [
+      "TypeScript",
+      "React",
+      "HTML/CSS",
+      "Redux",
+      "Next.js"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Looker",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Supply Chain ML",
+      "PyTorch"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "PyTorch",
+      "GCP Vertex AI",
+      "Docker",
+      "MLOps"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "Spring Boot",
+      "Kafka",
+      "Cassandra",
+      "Microservices"
+    ]
+  },
+  "Target": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "PayPal": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "FastAPI",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "Node.js",
+      "SQL",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "GraphQL",
+      "Express",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Java",
+      "Node.js",
+      "Spring Boot",
+      "REST APIs",
+      "Kafka",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "TypeScript",
+      "React",
+      "HTML/CSS",
+      "Redux",
+      "GraphQL"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Fraud Analytics"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Fraud Detection ML",
+      "Scikit-Learn"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Docker",
+      "Kafka"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "Spring Boot",
+      "Microservices",
+      "Kafka",
+      "REST APIs"
+    ]
+  },
+  "SAP Labs India": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Tata Motors": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "L&T Technology Services": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Mphasis": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Persistent Systems": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Coforge": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Cyient": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Happiest Minds": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Tata Elxsi": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Sonata Software": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Zensar Technologies": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Hexaware": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "Birlasoft": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  },
+  "KPIT Technologies": {
+    "Python Developer": [
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Django",
+      "Docker"
+    ],
+    "Software Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Data Structures",
+      "Spring Boot"
+    ],
+    "Full Stack Developer": [
+      "JavaScript",
+      "HTML/CSS",
+      "React",
+      "Node.js",
+      "Git",
+      "SQL"
+    ],
+    "Backend Developer": [
+      "Node.js",
+      "Express",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ],
+    "Frontend Developer": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "TypeScript"
+    ],
+    "Data Analyst": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI"
+    ],
+    "Data Scientist": [
+      "Python",
+      "SQL",
+      "Statistics",
+      "Machine Learning",
+      "Pandas"
+    ],
+    "Machine Learning Engineer": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Git",
+      "Docker"
+    ],
+    "ServiceNow Developer": [
+      "JavaScript",
+      "ServiceNow ITSM",
+      "HTML/CSS",
+      "REST APIs"
+    ],
+    "Java Developer": [
+      "Java",
+      "SQL",
+      "Git",
+      "Spring Boot",
+      "Microservices"
+    ]
+  }
+}

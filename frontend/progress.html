@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="auth-guard.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score Progress Trend - CareerMap AI</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js dependency -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Background Blobs -->
+  <div class="bg-blobs">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; color: white;">
+            <path d="M4 19L10 11L14 15L20 6"></path>
+            <circle cx="4" cy="19" r="2" fill="currentColor"></circle>
+            <circle cx="10" cy="11" r="2" fill="currentColor"></circle>
+            <circle cx="14" cy="15" r="2" fill="currentColor"></circle>
+            <circle cx="20" cy="6" r="2" fill="currentColor"></circle>
+          </svg>
+        </div>
+        <span>CareerMap AI</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="upload.html" class="nav-link">Analyze</a></li>
+        <li><a href="profile.html" class="nav-link">Profile</a></li>
+        <li><a href="score.html" class="nav-link">Score</a></li>
+        <li><a href="gaps.html" class="nav-link">Gaps</a></li>
+        <li><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+        <li><a href="progress.html" class="nav-link active">Progress</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" title="Toggle Light/Dark Mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main style="display: flex; flex-direction: column; align-items: center; gap: 2rem; padding-top: 1rem;">
+    <!-- Page Header -->
+    <div style="text-align: center; width: 100%; max-width: 1100px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem;">
+      <div style="text-align: left;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 0.25rem;">Score Progression Chart</h2>
+        <p style="font-size: 0.9rem; color: var(--text-secondary);">
+          Targeting: <strong id="timeline-role-text" style="color: var(--primary);">Software Development Engineer</strong>
+        </p>
+      </div>
+      
+      <div style="display: flex; align-items: center; gap: 1.5rem;">
+        <div style="text-align: right;">
+          <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Current Readiness</span>
+          <h3 style="font-size: 2.25rem; font-family: var(--font-heading); line-height: 1;"><span id="current-score-stat">0</span>%</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Readiness Overview Dashboard -->
+    <div class="card-glass page-anim" style="width: 100%; max-width: 1100px; padding: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+      <h3 style="font-size: 1.3rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; font-family: var(--font-heading);">Company Readiness Summary</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+        <div>
+          <h4 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 600;">Target Target</h4>
+          <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary);" id="target-company-role-summary">Cognizant — Python Developer</p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 600;">Readiness Metric</h4>
+          <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); line-height: 1.5;">
+            Current: <span id="current-readiness-val" style="color: var(--primary);">0%</span><br>
+            Previous: <span id="previous-readiness-val" style="color: var(--text-secondary);">0%</span>
+          </p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 600;">Status Summary</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+            <div id="skills-completed-list"><strong>Completed:</strong> ...</div>
+            <div id="skills-learning-list"><strong>Learning:</strong> ...</div>
+            <div id="skills-gaps-list"><strong>Remaining Gaps:</strong> ...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress Columns Layout -->
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 2.5rem; width: 100%; max-width: 1100px; align-items: flex-start;">
+      
+      <!-- Chart section (left) -->
+      <div class="card-glass page-anim" style="flex: 3; min-width: 320px; padding: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+          <h3 style="font-size: 1.25rem;">Readiness Trend Over Time</h3>
+          <button id="reanalyze-btn" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">
+            Re-Scan Profile
+          </button>
+        </div>
+        
+        <!-- Canvas wrapper to constrain size of responsive chart -->
+        <div style="position: relative; height: 350px; width: 100%;">
+          <canvas id="progress-chart"></canvas>
+        </div>
+      </div>
+
+      <!-- Audit History List Section (right) -->
+      <div style="flex: 2; min-width: 320px; display: flex; flex-direction: column;">
+        <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem; font-family: var(--font-heading);">Resume Audits Timeline</h3>
+        <div id="audit-timeline-list" style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
+          <!-- Populated dynamically by script.js -->
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 CareerMap AI. Made with premium design aesthetics.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
