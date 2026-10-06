@@ -94,17 +94,18 @@
         <input type="file" id="file-input" style="display: none;" accept=".pdf,.docx">
       </div>
 
-      <!-- STEP 2: Target Company -->
+      <!-- STEP 2: Target Company (ANY company — not limited) -->
       <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-        <label style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);">STEP 2 — Select Target Company</label>
+        <label style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);">STEP 2 — Enter Target Company</label>
+        <p style="font-size: 0.78rem; color: var(--text-muted); margin: -0.25rem 0 0 0;">Type any company name — not limited to the suggestions list</p>
         <div class="custom-select-wrapper" id="company-select-wrapper">
           <div class="custom-select-trigger form-input" id="company-trigger">
-            <span id="selected-company-text" style="opacity: 0.6;">Select Company</span>
+            <span id="selected-company-text" style="opacity: 0.6;">Type or select any company...</span>
             <span style="font-size: 0.75rem; opacity: 0.6;">▼</span>
           </div>
           <div class="custom-options" id="company-options">
             <div style="padding: 0.5rem; border-bottom: 1px solid var(--border-color);">
-              <input type="text" class="search-input" id="company-search" placeholder="Search company..." autocomplete="off">
+              <input type="text" class="search-input" id="company-search" placeholder="Type any company name..." autocomplete="off">
             </div>
             <div class="options-list" id="company-options-list">
               <!-- Injected by JS -->
@@ -113,23 +114,46 @@
         </div>
       </div>
 
-      <!-- STEP 3: Target Job Role -->
+      <!-- STEP 3: Target Job Role (ANY role — all streams) -->
       <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-        <label style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);">STEP 3 — Select Target Job Role</label>
+        <label style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);">STEP 3 — Enter Target Job Role</label>
+        <p style="font-size: 0.78rem; color: var(--text-muted); margin: -0.25rem 0 0 0;">IT, MBA, BCA, B.Com, Engineering, Arts — any role from any field</p>
         <div class="custom-select-wrapper" id="role-select-wrapper">
           <div class="custom-select-trigger form-input" id="role-trigger">
-            <span id="selected-role-text" style="opacity: 0.6;">Select Job Role</span>
+            <span id="selected-role-text" style="opacity: 0.6;">Type or select any job role...</span>
             <span style="font-size: 0.75rem; opacity: 0.6;">▼</span>
           </div>
           <div class="custom-options" id="role-options">
             <div style="padding: 0.5rem; border-bottom: 1px solid var(--border-color);">
-              <input type="text" class="search-input" id="role-search" placeholder="Search job role..." autocomplete="off">
+              <input type="text" class="search-input" id="role-search" placeholder="Type any job role..." autocomplete="off">
             </div>
             <div class="options-list" id="role-options-list">
               <!-- Injected by JS -->
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- STEP 4 (Optional): Paste Job Description for company-specific analysis -->
+      <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+        <details id="jd-paste-section">
+          <summary style="font-size: 0.9rem; font-weight: 600; color: var(--primary); cursor: pointer; user-select: none;">
+            📋 Optional — Paste Job Description for precise analysis
+          </summary>
+          <div style="margin-top: 0.5rem;">
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+              Paste the actual job posting text below. This gives the most accurate, company-specific skill requirements.
+              If left empty, we'll try to find a live posting automatically or use industry standard benchmarks.
+            </p>
+            <textarea id="jd-text-input" class="form-input" rows="6"
+              style="width: 100%; resize: vertical; font-size: 0.88rem; font-family: inherit; min-height: 80px;"
+              placeholder="Paste the job description / requirements here (optional)..."></textarea>
+          </div>
+        </details>
+      </div>
+
+      <!-- Requirement source badge (filled after analysis) -->
+      <div id="requirement-source-badge" style="display: none; padding: 0.5rem 0.75rem; border-radius: 0.5rem; font-size: 0.82rem; background: rgba(79,70,229,0.08); border: 1px solid rgba(79,70,229,0.15); color: var(--primary);">
       </div>
 
       <!-- Submit trigger -->

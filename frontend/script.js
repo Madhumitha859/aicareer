@@ -334,16 +334,70 @@ const COMPANIES = [
 ];
 
 const ROLES = [
+  // Tech / IT
   'Python Developer',
   'Software Developer',
   'Full Stack Developer',
   'Backend Developer',
+  'Frontend Developer',
   'Data Analyst',
   'Data Scientist',
   'Machine Learning Engineer',
   'ServiceNow Developer',
   'Java Developer',
-  'Frontend Developer'
+  'DevOps Engineer',
+  'Cloud Engineer',
+  'QA Engineer',
+  'Android Developer',
+  'iOS Developer',
+  'Cyber Security Analyst',
+  'Database Administrator',
+  'Network Engineer',
+  'UI/UX Designer',
+  // Business / Management (MBA, BBA, PGDM)
+  'Business Analyst',
+  'Management Consultant',
+  'Product Manager',
+  'Project Manager',
+  'Operations Manager',
+  'Supply Chain Manager',
+  'Business Development Executive',
+  // Marketing
+  'Marketing Manager',
+  'Digital Marketing Executive',
+  'Content Writer',
+  'Social Media Manager',
+  'Brand Manager',
+  // Finance / Commerce (B.Com, CA, MBA Finance)
+  'Financial Analyst',
+  'Accountant',
+  'Credit Analyst',
+  'Investment Analyst',
+  'Banking Officer',
+  'Auditor',
+  // HR
+  'HR Executive',
+  'Talent Acquisition Specialist',
+  'Recruiter',
+  // Sales
+  'Sales Executive',
+  'Account Manager',
+  // Engineering (Civil, Mechanical, Electrical)
+  'Civil Engineer',
+  'Mechanical Engineer',
+  'Electrical Engineer',
+  'Site Engineer',
+  // Science / Research
+  'Research Analyst',
+  'Lab Technician',
+  // Design
+  'Graphic Designer',
+  // Education
+  'Teacher',
+  'Corporate Trainer',
+  // Admin / Other
+  'Administrative Assistant',
+  'Customer Service Executive'
 ];
 
 const ROLE_BASE_REQUIREMENTS = {
@@ -562,18 +616,93 @@ const COMPANY_MODIFIERS = {
   }
 };
 
+function generateDynamicRoleRequirements(roleTitle) {
+  const lowered = (roleTitle || '').toLowerCase();
+  
+  const STANDARDS = {
+    'python': { required: ['Python', 'SQL', 'REST APIs', 'Git'], preferred: ['FastAPI', 'Docker', 'PostgreSQL'], certs: ['PCEP / PCAP Python Certification'] },
+    'software': { required: ['Java', 'Python', 'SQL', 'Git', 'Data Structures'], preferred: ['System Design', 'Agile', 'Docker'], certs: ['AWS Certified Developer'] },
+    'full stack': { required: ['JavaScript', 'React', 'Node.js', 'HTML/CSS', 'SQL'], preferred: ['Git', 'REST APIs', 'TypeScript'], certs: ['Meta Front-End Developer'] },
+    'backend': { required: ['Python', 'Node.js', 'SQL', 'REST APIs'], preferred: ['Docker', 'Git', 'System Design'], certs: ['AWS Solutions Architect'] },
+    'frontend': { required: ['JavaScript', 'HTML/CSS', 'React', 'Git'], preferred: ['TypeScript', 'Redux', 'Tailwind CSS'], certs: ['Meta Front-End Developer'] },
+    'data analyst': { required: ['SQL', 'Excel', 'Python', 'Statistics'], preferred: ['Tableau', 'Power BI', 'Data Cleaning'], certs: ['Google Data Analytics Certificate'] },
+    'data scientist': { required: ['Python', 'SQL', 'Statistics', 'Machine Learning'], preferred: ['Pandas', 'Scikit-Learn', 'Deep Learning'], certs: ['IBM Data Science Professional'] },
+    'machine learning': { required: ['Python', 'Machine Learning', 'PyTorch', 'Scikit-Learn'], preferred: ['Docker', 'Git', 'TensorFlow'], certs: ['DeepLearning.AI ML Specialization'] },
+    'devops': { required: ['Docker', 'Kubernetes', 'CI/CD', 'Linux'], preferred: ['AWS', 'Terraform', 'Git'], certs: ['Certified Kubernetes Administrator'] },
+    'cloud': { required: ['AWS', 'Docker', 'Linux', 'Cloud Architecture'], preferred: ['Kubernetes', 'Python', 'Terraform'], certs: ['AWS Solutions Architect Associate'] },
+    'cyber security': { required: ['Network Security', 'Linux', 'Vulnerability Assessment'], preferred: ['SIEM Tools', 'Python', 'Firewall Management'], certs: ['CompTIA Security+ / CEH'] },
+    'ui/ux': { required: ['Figma', 'Wireframing', 'Prototyping', 'User Research'], preferred: ['Design Systems', 'Adobe XD', 'Usability Testing'], certs: ['Google UX Design Certificate'] },
+
+    'business analyst': { required: ['Requirements Gathering', 'SQL', 'Excel', 'Stakeholder Management'], preferred: ['JIRA', 'Business Process Modeling', 'Power BI'], certs: ['CBAP / ECBA Certification'] },
+    'product manager': { required: ['Product Roadmapping', 'Agile/Scrum', 'Data Analytics', 'Stakeholder Management'], preferred: ['User Research', 'A/B Testing', 'JIRA'], certs: ['Certified Scrum Product Owner (CSPO)'] },
+    'project manager': { required: ['Project Planning', 'Agile/Scrum', 'Risk Management', 'Stakeholder Communication'], preferred: ['MS Project', 'JIRA', 'Budgeting'], certs: ['PMP / CAPM Certification'] },
+    'management consultant': { required: ['Strategy', 'Financial Modeling', 'PowerPoint', 'Excel'], preferred: ['Case Analysis', 'Stakeholder Management'], certs: ['Certified Management Consultant (CMC)'] },
+    'operations': { required: ['Process Optimization', 'Supply Chain Management', 'Excel', 'Vendor Management'], preferred: ['ERP Systems', 'Lean/Six Sigma'], certs: ['Six Sigma Green Belt'] },
+
+    'financial analyst': { required: ['Financial Modeling', 'Excel', 'Accounting', 'Valuation'], preferred: ['Bloomberg Terminal', 'SQL', 'Financial Reporting'], certs: ['CFA / FRM Certification'] },
+    'accountant': { required: ['Tally', 'Excel', 'GST Filing', 'Financial Statements'], preferred: ['Auditing', 'SAP FICO', 'Taxation'], certs: ['Chartered Accountant (CA) / CPA'] },
+    'credit analyst': { required: ['Credit Risk Assessment', 'Financial Analysis', 'Excel', 'Regulatory Compliance'], preferred: ['Banking Operations', 'SQL'], certs: ['Credit Risk Certified (CRC)'] },
+    'banking': { required: ['Banking Operations', 'KYC/AML', 'Excel', 'Customer Relationship'], preferred: ['Financial Products', 'Regulatory Compliance'], certs: ['Banking Professional Certification'] },
+
+    'marketing': { required: ['Digital Marketing', 'SEO/SEM', 'Google Analytics', 'Social Media Marketing'], preferred: ['Content Strategy', 'Email Marketing', 'Canva'], certs: ['HubSpot Inbound Marketing / Google Ads'] },
+    'sales': { required: ['CRM Tools', 'Negotiation', 'Lead Generation', 'Communication'], preferred: ['Salesforce', 'Market Research', 'Pipeline Management'], certs: ['HubSpot Sales Certified'] },
+    'content': { required: ['Content Writing', 'SEO', 'WordPress', 'Copywriting'], preferred: ['Social Media', 'Content Strategy', 'Google Analytics'], certs: ['Content Marketing Certification'] },
+    'hr': { required: ['Recruitment', 'Employee Relations', 'HRIS Systems', 'Interviewing'], preferred: ['Payroll Management', 'Labor Law', 'LinkedIn Recruiter'], certs: ['SHRM / PHR Certification'] },
+
+    'mechanical': { required: ['AutoCAD', 'SolidWorks', 'Thermodynamics', 'Manufacturing Processes'], preferred: ['Quality Control', 'Project Management'], certs: ['SolidWorks Certification'] },
+    'civil': { required: ['AutoCAD', 'Structural Analysis', 'Site Supervision', 'Estimation'], preferred: ['Project Management', 'Concrete Technology'], certs: ['AutoCAD Certified Professional'] },
+    'electrical': { required: ['Circuit Design', 'PLC Programming', 'AutoCAD Electrical', 'Power Systems'], preferred: ['Embedded Systems', 'Safety Standards'], certs: ['Certified Electrical Engineer'] },
+    'research': { required: ['Research Methodology', 'Data Analysis', 'Literature Review', 'Statistical Tools'], preferred: ['Report Writing', 'SPSS/R'], certs: ['Certified Research Professional'] }
+  };
+
+  for (const [key, val] of Object.entries(STANDARDS)) {
+    if (lowered.includes(key)) {
+      return {
+        required: val.required,
+        preferred: val.preferred,
+        certifications: val.certs,
+        tools: ['Excel', 'MS Office', 'Productivity Suite'],
+        exp: '1-3 years relevant domain experience'
+      };
+    }
+  }
+
+  const words = (roleTitle || '').split(/\s+/).filter(w => w.length > 2);
+  const customSkills = words.length > 0 ? words.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()) : ['Domain Expertise'];
+  return {
+    required: [...customSkills, 'Problem Solving', 'Communication', 'Industry Knowledge'],
+    preferred: ['Project Coordination', 'Strategic Planning', 'Documentation'],
+    certifications: [`Recognized Professional Credential in ${roleTitle}`],
+    tools: ['Industry Tools', 'Productivity Suite'],
+    exp: `1-3 years specialized experience in ${roleTitle}`
+  };
+}
+
 function getCompanyRoleRequirements(company, role) {
-  const base = ROLE_BASE_REQUIREMENTS[role] || ROLE_BASE_REQUIREMENTS['Python Developer'];
-  const modifier = COMPANY_MODIFIERS[company] || COMPANY_MODIFIERS['Cognizant'];
+  let base = ROLE_BASE_REQUIREMENTS[role];
+  if (!base) {
+    const roleLower = (role || '').toLowerCase();
+    for (const [k, v] of Object.entries(ROLE_BASE_REQUIREMENTS)) {
+      if (roleLower.includes(k.toLowerCase()) || k.toLowerCase().includes(roleLower)) {
+        base = v;
+        break;
+      }
+    }
+  }
+  if (!base) {
+    base = generateDynamicRoleRequirements(role);
+  }
+
+  const modifier = COMPANY_MODIFIERS[company] || null;
   
   const reqs = {
-    company: company,
-    role: role,
-    requiredSkills: [...base.required],
-    preferredSkills: [...base.preferred],
-    tools: [...base.tools],
-    certifications: [...base.certifications],
-    exp: base.exp
+    company: company || 'Target Company',
+    role: role || 'Target Role',
+    requiredSkills: [...(base.required || ['Communication', 'Problem Solving'])],
+    preferredSkills: [...(base.preferred || ['Teamwork', 'Project Management'])],
+    tools: [...(base.tools || ['Productivity Suite'])],
+    certifications: [...(base.certifications || ['Relevant Professional Certification'])],
+    exp: base.exp || '1-3 years professional experience'
   };
   
   // Add modifiers
@@ -597,8 +726,8 @@ function getCompanyRoleRequirements(company, role) {
 
 // --- 1b. ANALYSIS ENGINE ---
 function performAnalysis(state) {
-  const company = state.targetCompany || 'Cognizant';
-  const role = state.targetRole || 'Python Developer';
+  const company = state.targetCompany || 'Target Company';
+  const role = state.targetRole || 'Target Role';
   const reqs = getCompanyRoleRequirements(company, role);
   
   const candidateSkills = state.profile.skills || [];
@@ -881,8 +1010,8 @@ const State = {
 
   getDefaults() {
     const defaultState = {
-      targetCompany: 'Cognizant',
-      targetRole: 'Python Developer',
+      targetCompany: '',
+      targetRole: '',
       profile: {
         name: 'New User',
         experience: '',
@@ -891,7 +1020,8 @@ const State = {
         skills: []
       },
       scoreHistory: [],
-      roadmap: []
+      roadmap: [],
+      backendAnalysis: null
     };
     return defaultState;
   },
@@ -1117,14 +1247,34 @@ function setupSearchableDropdown({
   const searchInput = document.getElementById(searchId);
   const listContainer = document.getElementById(listId);
   const selectedText = document.getElementById(selectedTextId);
-  
-  if (!wrapper || !trigger || !options || !searchInput || !listContainer || !selectedText) return;
-  
+
+  if (!wrapper || !trigger || !options || !searchInput || !listContainer || !selectedText) return null;
+
+  // If already initialized on this wrapper, just update items & callback
+  if (wrapper._dropdownInstance) {
+    wrapper._dropdownInstance.updateItems(items);
+    if (onSelect) wrapper._dropdownInstance.onSelect = onSelect;
+    return wrapper._dropdownInstance;
+  }
+
+  let currentItems = [...items];
+  let currentOnSelect = onSelect;
+
+  function selectValue(val) {
+    if (!val) return;
+    selectedText.textContent = val;
+    selectedText.style.opacity = '1';
+    options.classList.remove('open');
+    if (typeof currentOnSelect === 'function') {
+      currentOnSelect(val);
+    }
+  }
+
   function renderItems(filterText = '') {
     listContainer.innerHTML = '';
-    const cleanFilter = filterText.trim();
-    const filtered = items.filter(item => item.toLowerCase().includes(cleanFilter.toLowerCase()));
-    const hasExactMatch = items.some(item => item.toLowerCase() === cleanFilter.toLowerCase());
+    const cleanFilter = (filterText || '').trim();
+    const filtered = currentItems.filter(item => item.toLowerCase().includes(cleanFilter.toLowerCase()));
+    const hasExactMatch = currentItems.some(item => item.toLowerCase() === cleanFilter.toLowerCase());
     
     if (cleanFilter.length > 0 && !hasExactMatch && allowCustom) {
       const customOption = document.createElement('div');
@@ -1132,17 +1282,15 @@ function setupSearchableDropdown({
       customOption.style.cssText = 'color: var(--primary); font-weight: 600; border-bottom: 1px dashed var(--border-color); background: rgba(79, 70, 229, 0.08);';
       customOption.innerHTML = `✨ Select Custom Target: <strong>"${cleanFilter}"</strong>`;
       
-      customOption.addEventListener('click', () => {
-        selectedText.textContent = cleanFilter;
-        selectedText.style.opacity = '1';
-        options.classList.remove('open');
-        onSelect(cleanFilter);
+      customOption.addEventListener('click', (e) => {
+        e.stopPropagation();
+        selectValue(cleanFilter);
       });
       listContainer.appendChild(customOption);
     }
 
     if (filtered.length === 0 && (!cleanFilter || !allowCustom)) {
-      listContainer.innerHTML = '<div style="padding:0.75rem 1rem; color:var(--text-muted); font-size:0.9rem;">No results found</div>';
+      listContainer.innerHTML = '<div style="padding:0.75rem 1rem; color:var(--text-muted); font-size:0.9rem;">No results found — type to enter any name</div>';
       return;
     }
     
@@ -1152,11 +1300,9 @@ function setupSearchableDropdown({
       option.dataset.value = item;
       option.textContent = item;
       
-      option.addEventListener('click', () => {
-        selectedText.textContent = item;
-        selectedText.style.opacity = '1';
-        options.classList.remove('open');
-        onSelect(item);
+      option.addEventListener('click', (e) => {
+        e.stopPropagation();
+        selectValue(item);
       });
       listContainer.appendChild(option);
     });
@@ -1173,17 +1319,44 @@ function setupSearchableDropdown({
     if (options.classList.contains('open')) {
       searchInput.value = '';
       renderItems();
-      searchInput.focus();
+      setTimeout(() => searchInput.focus(), 60);
     }
   });
   
   searchInput.addEventListener('input', () => {
     renderItems(searchInput.value);
   });
-  
+
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const clean = searchInput.value.trim();
+      if (clean) {
+        selectValue(clean);
+      } else {
+        const firstOption = listContainer.querySelector('.custom-option');
+        if (firstOption) firstOption.click();
+      }
+    }
+  });
+
   options.addEventListener('click', (e) => {
     e.stopPropagation();
   });
+
+  const instance = {
+    updateItems: (newItems) => {
+      currentItems = [...newItems];
+      renderItems(searchInput.value);
+    },
+    selectValue,
+    set onSelect(fn) {
+      currentOnSelect = fn;
+    }
+  };
+
+  wrapper._dropdownInstance = instance;
+  return instance;
 }
 
 // --- 2. INDEX.HTML (LANDING PAGE) ---
@@ -1373,93 +1546,19 @@ function initUploadPage() {
   const analyzeBtn = document.getElementById('analyze-btn');
   const overlay = document.getElementById('loader-overlay');
   
-  let selectedCompany = 'Cognizant';
-  let selectedRole = 'Python Developer';
+  let selectedCompany = '';
+  let selectedRole = '';
   let resumeStaged = false;
   let stagedFile = null;
 
-  // Dynamically load companies from API if available
-  apiFetch('/companies').then(data => {
-    if (data.companies && data.companies.length) {
-      // Setup company dropdown
-      setupSearchableDropdown({
-        wrapperId: 'company-select-wrapper',
-        triggerId: 'company-trigger',
-        optionsId: 'company-options',
-        searchId: 'company-search',
-        listId: 'company-options-list',
-        selectedTextId: 'selected-company-text',
-        items: data.companies,
-        onSelect: (val) => {
-          selectedCompany = val;
-          loadRolesForCompany(val);
-          checkValidation();
-          showToast(`Target Company set to: ${val}`, 'info');
-        }
-      });
-    }
-  }).catch(err => {
-    console.warn("Using local companies fallback", err);
-    setupSearchableDropdown({
-      wrapperId: 'company-select-wrapper',
-      triggerId: 'company-trigger',
-      optionsId: 'company-options',
-      searchId: 'company-search',
-      listId: 'company-options-list',
-      selectedTextId: 'selected-company-text',
-      items: COMPANIES,
-      onSelect: (val) => {
-        selectedCompany = val;
-        checkValidation();
-        showToast(`Target Company set to: ${val}`, 'info');
-      }
-    });
-  });
-
-  function loadRolesForCompany(companyName) {
-    apiFetch(`/roles/${encodeURIComponent(companyName)}`).then(data => {
-      if (data.roles && data.roles.length) {
-        setupSearchableDropdown({
-          wrapperId: 'role-select-wrapper',
-          triggerId: 'role-trigger',
-          optionsId: 'role-options',
-          searchId: 'role-search',
-          listId: 'role-options-list',
-          selectedTextId: 'selected-role-text',
-          items: data.roles,
-          onSelect: (val) => {
-            selectedRole = val;
-            checkValidation();
-            showToast(`Target Job Role set to: ${val}`, 'info');
-          }
-        });
-      } else {
-        useLocalRolesFallback();
-      }
-    }).catch(err => {
-      console.warn("Using local roles fallback", err);
-      useLocalRolesFallback();
-    });
+  // If user already has profile skills in state, mark resume as staged
+  const existingState = State.get();
+  if (existingState.profile && existingState.profile.skills && existingState.profile.skills.length > 0) {
+    resumeStaged = true;
   }
 
-  function useLocalRolesFallback() {
-    setupSearchableDropdown({
-      wrapperId: 'role-select-wrapper',
-      triggerId: 'role-trigger',
-      optionsId: 'role-options',
-      searchId: 'role-search',
-      listId: 'role-options-list',
-      selectedTextId: 'selected-role-text',
-      items: ROLES,
-      onSelect: (val) => {
-        selectedRole = val;
-        checkValidation();
-        showToast(`Target Job Role set to: ${val}`, 'info');
-      }
-    });
-  }
-
-  setupSearchableDropdown({
+  // 1. Initialize Role dropdown immediately with all base ROLES
+  const roleDropdown = setupSearchableDropdown({
     wrapperId: 'role-select-wrapper',
     triggerId: 'role-trigger',
     optionsId: 'role-options',
@@ -1467,6 +1566,7 @@ function initUploadPage() {
     listId: 'role-options-list',
     selectedTextId: 'selected-role-text',
     items: ROLES,
+    allowCustom: true,
     onSelect: (val) => {
       selectedRole = val;
       checkValidation();
@@ -1474,13 +1574,46 @@ function initUploadPage() {
     }
   });
 
+  // 2. Initialize Company dropdown immediately with default COMPANIES
+  const companyDropdown = setupSearchableDropdown({
+    wrapperId: 'company-select-wrapper',
+    triggerId: 'company-trigger',
+    optionsId: 'company-options',
+    searchId: 'company-search',
+    listId: 'company-options-list',
+    selectedTextId: 'selected-company-text',
+    items: COMPANIES,
+    allowCustom: true,
+    onSelect: (val) => {
+      selectedCompany = val;
+      loadRolesForCompany(val);
+      checkValidation();
+      showToast(`Target Company set to: ${val}`, 'info');
+    }
+  });
+
+  // 3. Dynamically enrich company suggestions from API if available
+  apiFetch('/companies').then(data => {
+    if (data.companies && data.companies.length && companyDropdown) {
+      companyDropdown.updateItems(data.companies);
+    }
+  }).catch(() => {});
+
+  function loadRolesForCompany(companyName) {
+    apiFetch(`/roles/${encodeURIComponent(companyName)}`).then(data => {
+      if (data.roles && data.roles.length && roleDropdown) {
+        roleDropdown.updateItems(data.roles);
+      }
+    }).catch(() => {});
+  }
+
   // Global click to close custom dropdowns
   document.addEventListener('click', () => {
     document.querySelectorAll('.custom-options').forEach(opt => opt.classList.remove('open'));
   });
 
   function checkValidation() {
-    if (resumeStaged && selectedCompany && selectedRole) {
+    if (selectedCompany && selectedRole) {
       analyzeBtn.removeAttribute('disabled');
     } else {
       analyzeBtn.setAttribute('disabled', 'true');
@@ -1529,7 +1662,7 @@ function initUploadPage() {
       resumeStaged = true;
       checkValidation();
 
-      // Upload file to backend resume parser if logged in
+      // Upload file to backend resume parser if possible
       const formData = new FormData();
       formData.append('file', file);
 
@@ -1542,20 +1675,34 @@ function initUploadPage() {
         if (result.extracted) {
           const state = State.get();
           if (result.extracted.skills) state.profile.skills = result.extracted.skills;
-          if (result.extracted.experience) state.profile.experience = JSON.stringify(result.extracted.experience);
-          if (result.extracted.education) state.profile.education = JSON.stringify(result.extracted.education);
-          if (result.extracted.projects) state.profile.projects = JSON.stringify(result.extracted.projects);
+          if (result.extracted.experience) state.profile.experience = typeof result.extracted.experience === 'string' ? result.extracted.experience : JSON.stringify(result.extracted.experience);
+          if (result.extracted.education) state.profile.education = typeof result.extracted.education === 'string' ? result.extracted.education : JSON.stringify(result.extracted.education);
+          if (result.extracted.projects) state.profile.projects = typeof result.extracted.projects === 'string' ? result.extracted.projects : JSON.stringify(result.extracted.projects);
           State.set(state);
 
-          // Update saved profile on backend
+          // Update saved profile on backend if logged in
           await apiFetch('/profile', {
             method: 'PUT',
             body: JSON.stringify(state.profile)
           }).catch(() => {});
         }
       } catch (err) {
-        console.warn("Local fallback for resume parsing", err);
-        showToast('Resume staged for analysis.', 'info');
+        console.warn("Client fallback for resume parsing", err);
+        // Fallback to client-side parser
+        try {
+          let text = '';
+          if (file.name.endsWith('.pdf')) text = await parsePDF(file);
+          else if (file.name.endsWith('.docx')) text = await parseDOCX(file);
+          else text = await parseTXT(file);
+          const parsed = extractProfileFromText(text);
+          const state = State.get();
+          state.profile = parsed;
+          State.set(state);
+          showToast('Resume parsed successfully!', 'success');
+        } catch (parseErr) {
+          console.warn("Local parse error", parseErr);
+          showToast('Resume staged for analysis.', 'info');
+        }
       }
     }
   }
@@ -1566,25 +1713,49 @@ function initUploadPage() {
       overlay.classList.add('active');
       runStepSimulation();
       
+      // Get optional job description text from paste area
+      const jdTextInput = document.getElementById('jd-text-input');
+      const jdText = jdTextInput ? jdTextInput.value.trim() : '';
+
       try {
         const state = State.get();
         state.targetCompany = selectedCompany;
         state.targetRole = selectedRole;
-        
-        // Run FastAPI analysis backend endpoint
+
+        const candidateSkills = (state.profile && state.profile.skills && state.profile.skills.length > 0)
+          ? state.profile.skills
+          : ['Communication', 'Problem Solving', 'Project Management'];
+
+        // Run FastAPI analysis backend endpoint with full candidate profile
         const analysisData = await apiFetch('/analysis/run', {
           method: 'POST',
           body: JSON.stringify({
             target_company: selectedCompany,
-            target_role: selectedRole
+            target_role: selectedRole,
+            job_description_text: jdText || null,
+            candidate_skills: candidateSkills,
+            candidate_experience: (state.profile && state.profile.experience) ? String(state.profile.experience) : "",
+            candidate_education: (state.profile && state.profile.education) ? String(state.profile.education) : "",
+            candidate_projects: (state.profile && state.profile.projects) ? String(state.profile.projects) : ""
           })
         });
 
         if (analysisData) {
           state.overallScore = analysisData.readiness_score;
           state.roadmap = analysisData.roadmap || [];
+          state.backendAnalysis = analysisData;
           State.set(state);
           showToast(`Analysis complete! Readiness Score: ${analysisData.readiness_score}%`, 'success');
+
+          // Show requirement source badge
+          const sourceBadge = document.getElementById('requirement-source-badge');
+          if (sourceBadge && analysisData.requirement_label) {
+            let icon = 'ℹ️';
+            if (analysisData.requirement_source === 'live_job_api') icon = '✅';
+            else if (analysisData.requirement_source === 'user_supplied') icon = '📋';
+            sourceBadge.innerHTML = `${icon} <strong>Requirements source:</strong> ${analysisData.requirement_label}`;
+            sourceBadge.style.display = 'block';
+          }
         }
       } catch (err) {
         console.warn("Backend analysis fallback", err);
@@ -1592,7 +1763,20 @@ function initUploadPage() {
         state.targetCompany = selectedCompany;
         state.targetRole = selectedRole;
         const analysis = performAnalysis(state);
+        state.overallScore = analysis.overallScore;
         state.roadmap = analysis.roadmap;
+        state.backendAnalysis = {
+          target_company: selectedCompany,
+          target_role: selectedRole,
+          readiness_score: analysis.overallScore,
+          category_scores: analysis.categories || {},
+          required_skills: (analysis.skillMatches || []).map(m => m.name),
+          strengths: (analysis.skillMatches || []).filter(m => m.status === 'strong').map(m => m.name),
+          gaps: analysis.gaps || [],
+          roadmap: analysis.roadmap || [],
+          requirement_source: 'industry_benchmark',
+          requirement_label: 'Industry Standard Benchmark (Offline Fallback)'
+        };
         State.set(state);
       }
     });
@@ -1724,25 +1908,39 @@ function initProfilePage() {
           })
         });
 
-        // Re-run analysis on backend
-        await apiFetch('/analysis/run', {
+        // Re-run analysis on backend with updated profile
+        const company = state.targetCompany || (state.backendAnalysis ? state.backendAnalysis.target_company : 'Target Company');
+        const role = state.targetRole || (state.backendAnalysis ? state.backendAnalysis.target_role : 'Target Role');
+
+        const reAnalysis = await apiFetch('/analysis/run', {
           method: 'POST',
           body: JSON.stringify({
-            target_company: state.targetCompany || 'Cognizant',
-            target_role: state.targetRole || 'Python Developer'
+            target_company: company,
+            target_role: role,
+            candidate_skills: state.profile.skills || [],
+            candidate_experience: String(state.profile.experience || ''),
+            candidate_education: String(state.profile.education || ''),
+            candidate_projects: String(state.profile.projects || '')
           })
-        }).catch(() => {});
+        }).catch(() => null);
 
-        showToast('Profile updated & re-analyzed by backend!', 'success');
+        if (reAnalysis) {
+          state.overallScore = reAnalysis.readiness_score;
+          state.roadmap = reAnalysis.roadmap || [];
+          state.backendAnalysis = reAnalysis;
+          State.set(state);
+        } else {
+          const analysis = performAnalysis(state);
+          state.overallScore = analysis.overallScore;
+          state.roadmap = analysis.roadmap;
+          State.set(state);
+        }
+
+        showToast('Profile updated & re-analyzed!', 'success');
       } catch (err) {
         console.warn("Local profile update fallback", err);
-        const newScore = State.calculateScore(state);
-        const dateString = new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-        state.scoreHistory.push({
-          date: `Update (${dateString})`,
-          score: newScore
-        });
         const analysis = performAnalysis(state);
+        state.overallScore = analysis.overallScore;
         state.roadmap = analysis.roadmap;
         State.set(state);
         showToast('Profile metrics updated.', 'success');
@@ -1756,10 +1954,90 @@ function initProfilePage() {
 }
 
 // --- 6. SCORE.HTML (SCORE VISUALS) ---
-function initScorePage() {
+async function initScorePage() {
   const state = State.get();
-  const analysis = performAnalysis(state);
-  const finalScore = analysis.overallScore;
+
+  // If no backendAnalysis in state, attempt to fetch latest from backend
+  if (!state.backendAnalysis || !state.backendAnalysis.readiness_score) {
+    try {
+      const latest = await apiFetch('/analysis/latest');
+      if (latest && latest.target_company && latest.target_role && latest.readiness_score) {
+        state.backendAnalysis = latest;
+        state.targetCompany = latest.target_company;
+        state.targetRole = latest.target_role;
+        state.overallScore = latest.readiness_score;
+        state.roadmap = latest.roadmap || [];
+        State.set(state);
+      }
+    } catch (e) {
+      console.warn("Could not fetch latest analysis", e);
+    }
+  }
+
+  // Prefer backend analysis data if available (dynamic), fall back to local analysis
+  let analysis;
+  let finalScore;
+  if (state.backendAnalysis && state.backendAnalysis.readiness_score) {
+    const ba = state.backendAnalysis;
+    analysis = {
+      company: ba.target_company,
+      role: ba.target_role,
+      overallScore: ba.readiness_score,
+      categories: ba.category_scores || {},
+      skillMatches: (ba.required_skills || []).map(s => ({
+        name: s,
+        status: (ba.strengths || []).some(st => st.toLowerCase() === s.toLowerCase()) ? 'strong' : 'missing'
+      })),
+      gaps: (ba.gaps || []).map(g => ({
+        name: g.name || g,
+        priority: g.priority || 'medium',
+        explainer: g.explainer || g.reason || ''
+      })),
+      alternativeRoles: [],
+      requirementSource: ba.requirement_source || '',
+      requirementLabel: ba.requirement_label || ''
+    };
+    finalScore = ba.readiness_score;
+  } else {
+    analysis = performAnalysis(state);
+    finalScore = analysis.overallScore;
+  }
+
+  // Populate dynamic suggested alternative roles based on role
+  if (!analysis.alternativeRoles || analysis.alternativeRoles.length === 0) {
+    const rLower = (analysis.role || '').toLowerCase();
+    if (rLower.includes('developer') || rLower.includes('software') || rLower.includes('python')) {
+      analysis.alternativeRoles = [
+        { role: 'Backend Developer', match: Math.min(95, Math.max(60, finalScore - 4)) },
+        { role: 'Full Stack Engineer', match: Math.min(92, Math.max(55, finalScore - 8)) },
+        { role: 'DevOps / Cloud Associate', match: Math.min(88, Math.max(50, finalScore - 12)) }
+      ];
+    } else if (rLower.includes('analyst') || rLower.includes('data')) {
+      analysis.alternativeRoles = [
+        { role: 'Business Intelligence Analyst', match: Math.min(95, Math.max(60, finalScore - 4)) },
+        { role: 'Data Operations Specialist', match: Math.min(90, Math.max(55, finalScore - 8)) },
+        { role: 'Analytics Consultant', match: Math.min(86, Math.max(50, finalScore - 12)) }
+      ];
+    } else if (rLower.includes('manager') || rLower.includes('business') || rLower.includes('product')) {
+      analysis.alternativeRoles = [
+        { role: 'Project Coordinator', match: Math.min(95, Math.max(60, finalScore - 4)) },
+        { role: 'Operations Lead', match: Math.min(90, Math.max(55, finalScore - 8)) },
+        { role: 'Strategy Associate', match: Math.min(85, Math.max(50, finalScore - 12)) }
+      ];
+    } else if (rLower.includes('finance') || rLower.includes('account') || rLower.includes('credit')) {
+      analysis.alternativeRoles = [
+        { role: 'Financial Analyst', match: Math.min(95, Math.max(60, finalScore - 4)) },
+        { role: 'Risk Assessment Specialist', match: Math.min(90, Math.max(55, finalScore - 8)) },
+        { role: 'Corporate Accounts Lead', match: Math.min(85, Math.max(50, finalScore - 12)) }
+      ];
+    } else {
+      analysis.alternativeRoles = [
+        { role: `Associate ${analysis.role}`, match: Math.min(96, Math.max(65, finalScore + 4)) },
+        { role: `Senior ${analysis.role}`, match: Math.min(90, Math.max(50, finalScore - 8)) },
+        { role: `Operations Lead`, match: Math.min(85, Math.max(50, finalScore - 10)) }
+      ];
+    }
+  }
   
   // Fill target text
   const targetTitle = document.getElementById('target-company-role-title');
@@ -1823,14 +2101,15 @@ function initScorePage() {
   // 4. Fill Explainable Score Explanation
   const explanationEl = document.getElementById('score-explanation');
   if (explanationEl) {
-    const matchedCount = analysis.skillMatches.filter(m => m.status === 'strong').length;
-    const totalCount = analysis.skillMatches.length;
+    const matchedCount = (analysis.skillMatches || []).filter(m => m.status === 'strong').length;
+    const totalCount = (analysis.skillMatches || []).length;
+    const topGaps = (analysis.gaps || []).slice(0, 2).map(g => g.name).join(' and ') || 'specialized tools';
     
     explanationEl.innerHTML = `
-      <strong>Analysis Summary:</strong> Your resume profile shows a <strong>${finalScore}%</strong> readiness level for a <strong>${analysis.role}</strong> position at <strong>${analysis.company}</strong>. 
-      We found that you match <strong>${matchedCount} out of ${totalCount}</strong> key target requirements. 
-      Your project background contributes well to your profile, but you are currently missing important skills like <strong>${analysis.gaps.slice(0, 2).map(g => g.name).join(' and ')}</strong>. 
-      Complete the items on your roadmap to boost your match rating!
+      <strong>Analysis Summary:</strong> Your profile shows a <strong>${finalScore}%</strong> readiness level for a <strong>${analysis.role}</strong> position at <strong>${analysis.company}</strong>. 
+      ${totalCount > 0 ? `You match <strong>${matchedCount} out of ${totalCount}</strong> key target requirements.` : ''} 
+      Focusing on bridging <strong>${topGaps}</strong> will accelerate your readiness. 
+      Explore the learning roadmap below to step through recommendations!
     `;
   }
 
@@ -1862,9 +2141,48 @@ function initScorePage() {
 }
 
 // --- 7. GAPS.HTML (STRENGTHS & GAPS DASHBOARD) ---
-function initGapsPage() {
+async function initGapsPage() {
   const state = State.get();
-  const analysis = performAnalysis(state);
+
+  // If no backendAnalysis in state, attempt to fetch latest from backend
+  if (!state.backendAnalysis || !state.backendAnalysis.readiness_score) {
+    try {
+      const latest = await apiFetch('/analysis/latest');
+      if (latest && latest.target_company && latest.target_role && latest.readiness_score) {
+        state.backendAnalysis = latest;
+        state.targetCompany = latest.target_company;
+        state.targetRole = latest.target_role;
+        state.overallScore = latest.readiness_score;
+        state.roadmap = latest.roadmap || [];
+        State.set(state);
+      }
+    } catch (e) {}
+  }
+
+  // Prefer backend analysis data if available (dynamic)
+  let analysis;
+  if (state.backendAnalysis && state.backendAnalysis.readiness_score) {
+    const ba = state.backendAnalysis;
+    analysis = {
+      company: ba.target_company,
+      role: ba.target_role,
+      overallScore: ba.readiness_score,
+      categories: ba.category_scores || {},
+      skillMatches: (ba.required_skills || []).map(s => ({
+        name: s,
+        status: (ba.strengths || []).some(st => st.toLowerCase() === s.toLowerCase()) ? 'strong' : 'missing'
+      })),
+      gaps: (ba.gaps || []).map(g => ({
+        name: g.name || g,
+        priority: g.priority || 'medium',
+        explainer: g.explainer || g.reason || '',
+        topics: g.topics || `Mastery of ${g.name || g} concepts & industry practices`
+      })),
+      alternativeRoles: []
+    };
+  } else {
+    analysis = performAnalysis(state);
+  }
 
   const titleEl = document.getElementById('gaps-header-title');
   if (titleEl) titleEl.textContent = `Your Skill Gaps for ${analysis.company} ${analysis.role}`;
@@ -1878,15 +2196,12 @@ function initGapsPage() {
   // Load strengths
   if (strengthList) {
     strengthList.innerHTML = '';
-    const matchedSkills = analysis.skillMatches.filter(m => m.status === 'strong').map(m => m.name);
+    const matchedSkills = (analysis.skillMatches || []).filter(m => m.status === 'strong').map(m => m.name);
     const strengths = [
-      `Solid baseline skills in ${matchedSkills.slice(0, 3).join(', ')}`,
-      'Proven development skills through completed projects',
-      'Formal academic computer science background indicators'
+      matchedSkills.length > 0 ? `Solid baseline skills in ${matchedSkills.slice(0, 4).join(', ')}` : 'Foundational professional communication and problem solving',
+      'Relevant profile background aligning with target sector',
+      'Demonstrated academic and learning commitment'
     ];
-    if (matchedSkills.length === 0) {
-      strengths[0] = 'Solid foundational knowledge in software web concepts.';
-    }
 
     strengths.forEach((str, idx) => {
       const card = document.createElement('div');
@@ -1906,11 +2221,11 @@ function initGapsPage() {
   if (gapList) {
     gapList.innerHTML = '';
     
-    if (analysis.gaps.length === 0) {
+    if (!analysis.gaps || analysis.gaps.length === 0) {
       gapList.innerHTML = `
         <div class="card-glass" style="border-left: 4px solid var(--success); padding: 1.5rem;">
           <h4 style="color: var(--success); margin-bottom: 0.5rem;">Congratulations!</h4>
-          <p>No skill gaps identified. You match 100% of the target requirements for this position!</p>
+          <p>No major skill gaps identified. You match the key target requirements for this position!</p>
         </div>
       `;
       return;
@@ -1928,12 +2243,12 @@ function initGapsPage() {
 
       card.innerHTML = `
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.75rem;">
-          <span class="badge ${badgeClass}">${item.priority.toUpperCase()} PRIORITY</span>
+          <span class="badge ${badgeClass}">${(item.priority || 'MEDIUM').toUpperCase()} PRIORITY</span>
           <span style="font-size:0.8rem; color:var(--text-muted);">Skill Gap</span>
         </div>
         <h3 style="font-size:1.2rem; margin-bottom:0.5rem; font-family: var(--font-heading);">${item.name}</h3>
-        <p style="font-size:0.9rem; margin-bottom:0.75rem; color:var(--text-secondary); line-height:1.5;">${item.explainer}</p>
-        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;"><strong>Focal areas:</strong> ${item.topics}</p>
+        <p style="font-size:0.9rem; margin-bottom:0.75rem; color:var(--text-secondary); line-height:1.5;">${item.explainer || 'Important skill for this role.'}</p>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;"><strong>Focal areas:</strong> ${item.topics || `Practical application of ${item.name}`}</p>
         <a href="roadmap.html" class="resource-link">View Roadmap Detail →</a>
       `;
       gapList.appendChild(card);
@@ -1942,9 +2257,51 @@ function initGapsPage() {
 }
 
 // --- 8. ROADMAP.HTML (TIMELINE & INTERACTIVE CHECKBOXES) ---
-function initRoadmapPage() {
+async function initRoadmapPage() {
   const state = State.get();
-  const analysis = performAnalysis(state);
+
+  // If no backendAnalysis in state, attempt to fetch latest from backend
+  if (!state.backendAnalysis || !state.backendAnalysis.readiness_score) {
+    try {
+      const latest = await apiFetch('/analysis/latest');
+      if (latest && latest.target_company && latest.target_role && latest.readiness_score) {
+        state.backendAnalysis = latest;
+        state.targetCompany = latest.target_company;
+        state.targetRole = latest.target_role;
+        state.overallScore = latest.readiness_score;
+        state.roadmap = latest.roadmap || [];
+        State.set(state);
+      }
+    } catch (e) {}
+  }
+
+  // Prefer backend analysis data if available (dynamic)
+  let analysis;
+  if (state.backendAnalysis && state.backendAnalysis.readiness_score) {
+    const ba = state.backendAnalysis;
+    analysis = {
+      company: ba.target_company,
+      role: ba.target_role,
+      overallScore: ba.readiness_score
+    };
+
+    if (ba.roadmap && ba.roadmap.length && (!state.roadmap || state.roadmap.length === 0)) {
+      state.roadmap = ba.roadmap.map(item => ({
+        id: item.id,
+        name: item.name || item.skill_name,
+        priority: item.priority || 'medium',
+        status: item.status || 'not_started',
+        completed: item.completed || item.status === 'completed',
+        resources: (item.resources || []).map(r => ({
+          text: r.title || r.text || `Learn ${item.name || item.skill_name}`,
+          url: r.url || '#'
+        })),
+        topics: `Core focus: applied ${item.name || item.skill_name} concepts.`
+      }));
+    }
+  } else {
+    analysis = performAnalysis(state);
+  }
 
   const titleEl = document.getElementById('roadmap-header-title');
   if (titleEl) titleEl.textContent = `${analysis.company} ${analysis.role} Roadmap`;
@@ -1965,7 +2322,7 @@ function initRoadmapPage() {
     progressLine.className = 'timeline-progress';
     timelineContainer.appendChild(progressLine);
 
-    if (state.roadmap.length === 0) {
+    if (!state.roadmap || state.roadmap.length === 0) {
       timelineContainer.innerHTML = `
         <div class="card-glass" style="padding: 2rem; text-align: center;">
           <h3 style="color: var(--success); margin-bottom: 0.5rem;">Roadmap Complete!</h3>
@@ -1980,24 +2337,26 @@ function initRoadmapPage() {
       const stepEl = document.createElement('div');
       stepEl.className = `timeline-step ${step.completed ? 'completed' : ''} ${index === 0 ? 'active' : ''}`;
       
-      const resourceLinksHTML = step.resources.map(res => `
-        <a href="${res.url}" target="_blank" class="resource-link">🔗 ${res.text}</a>
-      `).join(' ');
+      const resourceLinksHTML = (step.resources || []).map(res => {
+        const text = res.text || res.title || 'Official Guide';
+        const url = res.url || '#';
+        return `<a href="${url}" target="_blank" class="resource-link">🔗 ${text}</a>`;
+      }).join(' ');
 
       stepEl.innerHTML = `
         <div class="timeline-dot"></div>
         <div class="card-glass timeline-card hover-lift">
           <div class="timeline-header">
             <h3 style="font-size:1.15rem; font-family: var(--font-heading);">${index + 1}. ${step.name}</h3>
-            <span class="badge ${step.priority === 'high' ? 'high' : step.priority === 'medium' ? 'medium' : 'low'}">${step.priority.toUpperCase()}</span>
+            <span class="badge ${step.priority === 'high' ? 'high' : step.priority === 'medium' ? 'medium' : 'low'}">${(step.priority || 'MEDIUM').toUpperCase()}</span>
           </div>
           
           <div class="timeline-content-wrapper">
             <p style="font-size: 0.9rem; margin-bottom: 1rem; margin-top:0.5rem; color: var(--text-secondary);">
-              <strong>Core topics:</strong> ${step.topics}
+              <strong>Core topics:</strong> ${step.topics || `Mastery of ${step.name}`}
             </p>
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
-              <div style="display:flex; gap:0.75rem;">
+              <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
                 ${resourceLinksHTML}
               </div>
               <label class="checkbox-container">
@@ -2280,8 +2639,24 @@ function setupQuizSection(state, analysis) {
 // --- 9. PROGRESS.HTML (CHART TRENDING DASHBOARD) ---
 function initProgressPage() {
   const state = State.get();
-  const analysis = performAnalysis(state);
-  const currentScore = analysis.overallScore;
+  let analysis;
+  let currentScore;
+  if (state.backendAnalysis && state.backendAnalysis.readiness_score) {
+    const ba = state.backendAnalysis;
+    analysis = {
+      company: ba.target_company,
+      role: ba.target_role,
+      overallScore: ba.readiness_score,
+      skillMatches: (ba.required_skills || []).map(s => ({
+        name: s,
+        status: (ba.strengths || []).some(st => st.toLowerCase() === s.toLowerCase()) ? 'strong' : 'missing'
+      }))
+    };
+    currentScore = ba.readiness_score;
+  } else {
+    analysis = performAnalysis(state);
+    currentScore = analysis.overallScore;
+  }
   
   // Fill texts
   const progressText = document.getElementById('timeline-role-text');

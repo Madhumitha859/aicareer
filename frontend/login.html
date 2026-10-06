@@ -187,8 +187,10 @@
       document.getElementById(id).style.display = 'none';
     }
 
+    const API_BASE = 'http://localhost:8000/api';
+
     // ===== SIGNUP =====
-    document.getElementById('signup-form').addEventListener('submit', (e) => {
+    document.getElementById('signup-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       hideError('signup-error');
       document.getElementById('signup-success').style.display = 'none';
@@ -198,33 +200,55 @@
       const password = document.getElementById('signup-password').value;
       const btn      = document.getElementById('signup-btn');
 
-      const users = getUsers();
-
-      if (users[email]) {
-        showError('signup-error', 'An account with this email already exists. Please log in.');
-        return;
-      }
-
-      // Save new user
-      users[email] = { name, email, password };
-      saveUsers(users);
-
-      // Auto-login
-      localStorage.setItem('currentUser', email);
-
       btn.textContent = 'Creating account...';
       btn.disabled = true;
+
+      try {
+        // 1. Attempt API registration
+        const res = await fetch(`${API_BASE}/auth/register`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, password })
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          if (data.access_token) {
+            localStorage.setItem('cm_token', data.access_token);
+          }
+          if (data.user && data.user.name) {
+            localStorage.setItem('cm_userName', data.user.name);
+          }
+        } else {
+          const errData = await res.json().catch(() => ({}));
+          // If already exists on backend
+          if (res.status === 400 && errData.detail && errData.detail.includes('exists')) {
+            showError('signup-error', 'An account with this email already exists. Please log in.');
+            btn.textContent = 'Get Started';
+            btn.disabled = false;
+            return;
+          }
+        }
+      } catch (networkErr) {
+        console.warn("Backend auth offline, using local registry:", networkErr);
+      }
+
+      // Always save local backup
+      const users = getUsers();
+      users[email] = { name, email, password };
+      saveUsers(users);
+      localStorage.setItem('currentUser', email);
 
       document.getElementById('signup-success').textContent = `Account created! Welcome, ${name}. Redirecting...`;
       document.getElementById('signup-success').style.display = 'block';
 
       setTimeout(() => {
         window.location.href = 'upload.html';
-      }, 1000);
+      }, 900);
     });
 
     // ===== LOGIN =====
-    document.getElementById('login-form').addEventListener('submit', (e) => {
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       hideError('login-error');
 
@@ -232,27 +256,61 @@
       const password = document.getElementById('login-password').value;
       const btn      = document.getElementById('login-btn');
 
-      const users = getUsers();
-      const user  = users[email];
+      btn.textContent = 'Signing in...';
+      btn.disabled = true;
 
-      if (!user) {
-        showError('login-error', 'No account found with this email. Please sign up first.');
-        return;
-      }
-      if (user.password !== password) {
-        showError('login-error', 'Incorrect password. Please try again.');
-        return;
+      let backendAuthSuccess = false;
+      try {
+        const res = await fetch(`${API_BASE}/auth/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          if (data.access_token) {
+            localStorage.setItem('cm_token', data.access_token);
+          }
+          if (data.user && data.user.name) {
+            localStorage.setItem('cm_userName', data.user.name);
+          }
+          backendAuthSuccess = true;
+        } else if (res.status === 401) {
+          // Check local users registry fallback
+          const users = getUsers();
+          const user  = users[email];
+          if (!user || user.password !== password) {
+            showError('login-error', 'Invalid email or password. Please try again.');
+            btn.textContent = 'Sign In';
+            btn.disabled = false;
+            return;
+          }
+        }
+      } catch (networkErr) {
+        console.warn("Backend login offline, checking local registry:", networkErr);
+        const users = getUsers();
+        const user  = users[email];
+        if (!user) {
+          showError('login-error', 'No account found with this email. Please sign up first.');
+          btn.textContent = 'Sign In';
+          btn.disabled = false;
+          return;
+        }
+        if (user.password !== password) {
+          showError('login-error', 'Incorrect password. Please try again.');
+          btn.textContent = 'Sign In';
+          btn.disabled = false;
+          return;
+        }
       }
 
       // Set current user
       localStorage.setItem('currentUser', email);
 
-      btn.textContent = 'Signing in...';
-      btn.disabled = true;
-
       setTimeout(() => {
         window.location.href = 'upload.html';
-      }, 800);
+      }, 700);
     });
   </script>
 </body>

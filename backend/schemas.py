@@ -50,6 +50,16 @@ class ProfileUpdate(BaseModel):
 class AnalysisRunRequest(BaseModel):
     target_company: str
     target_role: str
+    job_description_text: Optional[str] = None
+    candidate_skills: Optional[List[str]] = None
+    candidate_experience: Optional[str] = None
+    candidate_education: Optional[str] = None
+    candidate_projects: Optional[str] = None
+
+class JobRequirementRequest(BaseModel):
+    company: str
+    role: str
+    job_description_text: Optional[str] = None
 
 class GapItem(BaseModel):
     name: str
@@ -68,6 +78,8 @@ class AnalysisOut(BaseModel):
     ai_summary: Optional[str]
     created_at: datetime
     roadmap: List[Dict[str, Any]] = []
+    requirement_source: Optional[str] = None
+    requirement_label: Optional[str] = None
 
     class Config:
         from_attributes = True

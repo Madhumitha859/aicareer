@@ -1,3 +1,4 @@
+from typing import Optional
 import io
 from fastapi import APIRouter, UploadFile, File, HTTPException, Depends, status
 import ai_service, models, auth
@@ -7,7 +8,7 @@ router = APIRouter(prefix="/api/resume", tags=["Resume Upload"])
 @router.post("/upload")
 async def upload_resume(
     file: UploadFile = File(...),
-    current_user: models.User = Depends(auth.get_current_user)
+    current_user: Optional[models.User] = Depends(auth.get_optional_current_user)
 ):
     if not file.filename:
         raise HTTPException(status_code=400, detail="No file provided")
@@ -42,7 +43,8 @@ async def upload_resume(
         )
 
     if not extracted_text.strip():
-        extracted_text = f"Sample candidate resume content for {current_user.name}"
+        user_display = current_user.name if current_user else "Candidate"
+        extracted_text = f"Sample candidate resume content for {user_display}"
 
     # Extract structured fields using AI service
     parsed_json = ai_service.extract_resume_data(extracted_text)

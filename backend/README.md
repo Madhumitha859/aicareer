@@ -30,8 +30,16 @@ Edit `.env` to insert your `ANTHROPIC_API_KEY`:
 ANTHROPIC_API_KEY=your_anthropic_api_key_here
 SECRET_KEY=your_custom_jwt_secret_key
 DATABASE_URL=sqlite:///./careermap.db
+RAPIDAPI_KEY=your_rapidapi_key_here
+RAPIDAPI_HOST=jsearch.p.rapidapi.com
 ```
-*(Note: If `ANTHROPIC_API_KEY` is omitted, the API automatically uses a clean static fallback system so all features and endpoints remain fully functional).*
+*(Note: If `RAPIDAPI_KEY` or `ANTHROPIC_API_KEY` are omitted, the API automatically uses a clean grounded heuristic fallback system across all professional fields — IT, MBA, B.Com, Engineering, Arts, Science, etc.).*
+
+### 3-Tier Dynamic Job Requirement Resolution:
+1. **Tier 1 (Live Job API)**: Queries real-time job postings via JSearch / RapidAPI for current hiring criteria.
+2. **Tier 2 (User-Supplied JD)**: Analyzes user-pasted job postings directly to extract company-specific requirements.
+3. **Tier 3 (Role Benchmark Standards)**: Leverages industry-standard competency benchmarks for any role, ensuring no hallucinations.
+
 
 ### 4. Run the Development Server
 ```bash
