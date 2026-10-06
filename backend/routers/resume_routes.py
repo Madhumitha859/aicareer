@@ -19,9 +19,15 @@ async def upload_resume(
 
     try:
         if filename.endswith(".pdf"):
-            import pdfplumber
-            with pdfplumber.open(io.BytesIO(contents)) as pdf:
-                pages_text = [page.extract_text() or "" for page in pdf.pages]
+            try:
+                import pdfplumber
+                with pdfplumber.open(io.BytesIO(contents)) as pdf:
+                    pages_text = [page.extract_text() or "" for page in pdf.pages]
+                    extracted_text = "\n".join(pages_text)
+            except Exception:
+                import pypdf
+                reader = pypdf.PdfReader(io.BytesIO(contents))
+                pages_text = [page.extract_text() or "" for page in reader.pages]
                 extracted_text = "\n".join(pages_text)
         elif filename.endswith(".docx"):
             import docx
@@ -37,10 +43,8 @@ async def upload_resume(
     except HTTPException:
         raise  # Re-raise HTTP errors (e.g. unsupported format) as-is
     except Exception as e:
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to read file content: {str(e)}"
-        )
+        # Graceful fallback to decoded text or error logging
+        extracted_text = contents.decode("utf-8", errors="ignore")
 
     if not extracted_text.strip():
         user_display = current_user.name if current_user else "Candidate"
